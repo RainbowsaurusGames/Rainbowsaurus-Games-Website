@@ -965,6 +965,13 @@ body {
     box-shadow: 0 0 15px rgba(255, 71, 126, 0.4);
 }
 
+.tab-yellow:hover, .tab-yellow.active {
+    background-color: var(--accent-yellow);
+    border-color: var(--accent-yellow);
+    color: var(--bg-main);
+    box-shadow: 0 0 15px rgba(255, 204, 0, 0.4);
+}
+
 /* --- 13. SCROLL ANIMATIONEN --- */
 .slide-hidden {
     opacity: 0;
