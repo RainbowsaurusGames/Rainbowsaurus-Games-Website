@@ -1322,16 +1322,19 @@ body, a, button, label {
     /* Hauptcontainer anpassen */
     .portfolio-container {
         padding: 10px;
-        margin-top: 60px;
+        margin-top: 20px; /* Mehr Abstand nach oben für das Logo */
         margin-bottom: 40px;
     }
 
+    /* Obere Navigation entzerren und nach oben schieben, damit sie nicht im Logo hängt */
     .top-nav, .top-nav-about {
-        flex-wrap: wrap;
-        gap: 15px;
-        top: 20px;
-        padding: 0 10px;
-        justify-content: center;
+        position: relative !important;
+        top: 0 !important;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0 20px 0;
+        margin-bottom: 20px;
     }
 
         /* Alle Buttons und Links für "Wurstfinger" vergrößern */
@@ -1342,18 +1345,20 @@ body, a, button, label {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 100%; /* Auf dem Handy schön breit zum Antippen */
+            width: 100%;
             text-align: center;
         }
 
     .studio-logo-centered {
-        max-width: 200px;
+        max-width: 180px;
     }
 
-    /* Dino-Sprechblase für Handys verkleinern und unter das Logo setzen */
+    /* Dino-Sprechblase unter dem Logo mit Zipfel nach OBEN */
     .pixel-speech-bubble {
         position: relative !important;
-        top: 15px !important;
+        top: 0 !important;
+        margin-top: 20px !important;
+        margin-bottom: 15px !important;
         right: auto !important;
         left: auto !important;
         font-size: 0.9rem !important;
@@ -1361,17 +1366,31 @@ body, a, button, label {
         border-width: 2px !important;
         box-shadow: 4px 4px 0px rgba(0, 0, 0, 0.5) !important;
         max-width: 90%;
-        margin: 0 auto;
+        margin-left: auto;
+        margin-right: auto;
     }
 
+        /* Das kleine Eckchen zeigt jetzt nach OBEN zur Blase */
         .pixel-speech-bubble::after {
-            display: none; /* Pfeil auf dem Handy ausblenden, da sie jetzt darunter sitzt */
+            content: '';
+            display: block !important;
+            position: absolute;
+            top: -10px; /* Platziert den Zipfel oberhalb der Blase */
+            left: 50%;
+            transform: translateX(-50%);
+            width: 0;
+            height: 0;
+            border-left: 10px solid transparent;
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid var(--text-main); /* Zeigt nach oben */
+            border-top: none;
         }
 
     .logo-wrapper {
         display: flex;
-        flex-direction: column;
+        flex-direction: column-reverse; /* Dreht die Reihenfolge um: Logo oben, Blase darunter */
         align-items: center;
+        margin-top: 10px;
     }
 
     .studio-tagline {
@@ -1472,7 +1491,7 @@ body, a, button, label {
     }
 
     .footer-nav {
-        flex-direction: column; /* Buttons untereinander */
+        flex-direction: column;
         gap: 12px;
         padding: 0;
         margin-top: 0;
