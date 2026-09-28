@@ -50,16 +50,14 @@ body {
     -webkit-mask-image: radial-gradient(circle 200px at var(--mouse-x, -100%) var(--mouse-y, -100%), black 0%, transparent 100%);
 }
 
-/* 3. Canvas & Pixelraster korrigieren (keine verzerrten Rechtecke) */
 #pixelCanvas {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    pointer-events: auto !important; /* Erlaubt Touch-Eingaben auf dem Handy */
-    touch-action: none; /* Verhindert das unabsichtliche Scrollen beim Malen */
-    z-index: 0 !important;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
 }
 
 /* --- 4. TOP NAVIGATION (Für beide Seiten) --- */
@@ -1107,123 +1105,6 @@ body {
     }
 }
 
-/* --- 16. RESPONSIVE DESIGN (Handy-Ansicht) --- */
-@media (max-width: 768px) {
-    .top-nav, .top-nav-about {
-        flex-wrap: wrap;
-        gap: 20px;
-        top: 20px;
-        padding: 0 20px;
-        justify-content: center;
-    }
-
-    /* 4. Sicherstellen, dass alle Buttons und Menüs über dem Canvas liegen */
-    .canvas-glass-container, .minimal-footer, .top-nav, .top-nav-about, .bento-grid {
-        position: relative;
-        z-index: 100 !important;
-    }
-
-    .studio-logo-centered {
-        max-width: 250px;
-    }
-
-    .studio-tagline {
-        font-size: 1rem;
-        padding: 0 20px;
-    }
-
-    .hero-section {
-        flex-direction: column-reverse;
-        text-align: center;
-    }
-
-    .bento-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .wide-card, .square-card, .large-card {
-        grid-column: span 1;
-    }
-
-    .large-card {
-        flex-direction: column;
-    }
-
-    .project-image-placeholder, .slideshow-container {
-        width: 100%;
-    }
-
-    .stats-row {
-        grid-template-columns: 1fr;
-    }
-
-    .journey-container {
-        padding-left: 35px;
-        margin-top: 20px;
-    }
-
-    .journey-line-bg, .journey-line-progress {
-        left: 10px;
-    }
-
-    .journey-item::before {
-        left: -31px;
-        top: 55px;
-        width: 12px;
-        height: 12px;
-    }
-
-    .journey-year-container {
-        position: relative;
-        left: 0;
-        width: 100%;
-        bottom: auto;
-        margin-bottom: 10px;
-    }
-
-    .journey-year {
-        position: relative;
-        top: 0;
-        text-align: left;
-        transform: none !important;
-        color: var(--accent-pink);
-        font-size: 1.3rem;
-    }
-
-    .journey-content-wrapper {
-        max-width: 100%;
-        transform: scale(1);
-        opacity: 1;
-    }
-
-    .journey-image {
-        height: 150px;
-    }
-
-    .collage-header {
-        display: flex;
-        flex-direction: column;
-        aspect-ratio: auto;
-        height: 300px;
-    }
-
-    .footer-nav {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    .profile-container {
-        margin-right: 0;
-        margin-bottom: 30px;
-    }
-
-    .canvas-hint {
-        bottom: 10px;
-        right: 10px;
-        font-size: 0.75rem;
-    }
-}
-
 /* --- 17. VERSTECKTE NEON-SCROLLBAR --- */
 ::-webkit-scrollbar {
     width: 20px;
@@ -1364,13 +1245,6 @@ body {
         box-shadow: 0 0 15px rgba(255, 59, 48, 0.4);
     }
 
-@media (max-width: 768px) {
-    .canvas-glass-container {
-        bottom: 15px;
-        right: 15px;
-    }
-}
-
 /* --- 19. EIGENER PIXEL-MAUSZEIGER --- */
 body, a, button, label {
     cursor: none !important;
@@ -1409,16 +1283,6 @@ body, a, button, label {
         transform: translate(-50%, -50%) scale(0.8);
     }
 
-@media (max-width: 768px) {
-    body, a, button, label {
-        cursor: auto !important;
-    }
-
-    .custom-cursor {
-        display: none !important;
-    }
-}
-
 /* --- 20. WIKIPEDIA BILD-LIZENZ OVERLAY --- */
 .license-overlay {
     position: absolute;
@@ -1439,48 +1303,135 @@ body, a, button, label {
     text-overflow: ellipsis;
 }
 
-/* --- MOBILE OPTIMIERUNG (Max. 768px) --- */
+/* --- 16. RESPONSIVE DESIGN (Handy-Ansicht) --- */
 @media screen and (max-width: 768px) {
-    /* 1. Hauptcontainer anpassen, damit nichts abgeschnitten wird */
+    /* Standard-Cursor für Touch wieder aktivieren */
+    body, a, button, label {
+        cursor: auto !important;
+    }
+
+    .custom-cursor {
+        display: none !important;
+    }
+
+    /* Pixelmalerei & Farbpalette auf Handys komplett ausblenden */
+    #pixelCanvas, .canvas-glass-container {
+        display: none !important;
+    }
+
+    /* Hauptcontainer anpassen */
     .portfolio-container {
         padding: 10px;
         margin-top: 60px;
-        margin-bottom: 80px; /* Platz für den fixierten Footer lassen */
+        margin-bottom: 90px;
     }
 
-    /* 2. Bento-Grid für Handys einspaltig machen */
+    .top-nav, .top-nav-about {
+        flex-wrap: wrap;
+        gap: 15px;
+        top: 20px;
+        padding: 0 10px;
+        justify-content: center;
+    }
+
+        /* Alle Buttons, Links und Navigationsleisten für "Wurstfinger" vergrößern */
+        .top-nav a, .top-nav-about a, .footer-nav .nav-tab, .press-start-btn, .project-btn, .contact-button {
+            font-size: 1.1rem !important;
+            padding: 14px 24px !important;
+            min-height: 48px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+    .studio-logo-centered {
+        max-width: 250px;
+    }
+
+    .studio-tagline {
+        font-size: 1rem;
+        padding: 0 20px;
+    }
+
+    .hero-section {
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+
     .bento-grid {
-        grid-template-columns: 1fr !important;
+        grid-template-columns: 1fr;
         gap: 15px;
     }
 
-    .large-card, .card {
-        grid-column: span 1 !important;
-        grid-row: span 1 !important;
+    .wide-card, .square-card, .large-card {
+        grid-column: span 1;
+        grid-row: span 1;
         padding: 15px;
     }
 
-    /* 3. Canvas & Pixelraster flexibel machen, damit es nicht sprengt */
-    #pixelCanvas {
-        width: 100% !important;
-        height: auto !important;
-        max-height: 300px;
-        touch-action: none; /* Verhindert ungewolltes Scrollen beim Zeichnen */
+    .large-card {
+        flex-direction: column;
     }
 
-    /* 4. Die Farbpalette / Werkzeuge direkt unter das Raster holen */
-    .palette-container, .tool-selector {
-        position: relative !important;
-        bottom: auto !important;
-        left: auto !important;
+    .project-image-placeholder, .slideshow-container {
+        width: 100%;
+    }
+
+    .stats-row {
+        grid-template-columns: 1fr;
+    }
+
+    .journey-container {
+        padding-left: 35px;
+        margin-top: 20px;
+    }
+
+    .journey-line-bg, .journey-line-progress {
+        left: 10px;
+    }
+
+    .journey-item::before {
+        left: -31px;
+        top: 55px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .journey-year-container {
+        position: relative;
+        left: 0;
+        width: 100%;
+        bottom: auto;
+        margin-bottom: 10px;
+    }
+
+    .journey-year {
+        position: relative;
+        top: 0;
+        text-align: left;
+        transform: none !important;
+        color: var(--accent-pink);
+        font-size: 1.3rem;
+    }
+
+    .journey-content-wrapper {
+        max-width: 100%;
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    .journey-image {
+        height: 150px;
+    }
+
+    .collage-header {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 8px;
-        margin-top: 15px;
+        flex-direction: column;
+        aspect-ratio: auto;
+        height: 300px;
     }
 
-    /* 5. Footer unten festkleben (Sticky Nav), damit er immer erreichbar ist */
+    /* Footer unten festkleben (Sticky Nav) */
     .minimal-footer {
         position: fixed;
         bottom: 0;
@@ -1488,19 +1439,21 @@ body, a, button, label {
         width: 100%;
         background-color: rgba(18, 18, 18, 0.95);
         backdrop-filter: blur(5px);
-        padding: 10px 0;
+        padding: 12px 0;
         z-index: 1000;
         border-top: 1px solid var(--border-color);
     }
 
     .footer-nav {
-        display: flex;
+        flex-direction: row;
         justify-content: space-around;
+        gap: 10px;
         padding: 0 10px;
+        margin-top: 0;
     }
 
-        .footer-nav .nav-tab {
-            font-size: 0.75rem;
-            padding: 6px 10px;
-        }
+    .profile-container {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
 }
