@@ -1430,3 +1430,69 @@ body, a, button, label {
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+/* --- MOBILE OPTIMIERUNG (Max. 768px) --- */
+@media screen and (max-width: 768px) {
+    /* 1. Hauptcontainer anpassen, damit nichts abgeschnitten wird */
+    .portfolio-container {
+        padding: 10px;
+        margin-top: 60px;
+        margin-bottom: 80px; /* Platz für den fixierten Footer lassen */
+    }
+
+    /* 2. Bento-Grid für Handys einspaltig machen */
+    .bento-grid {
+        grid-template-columns: 1fr !important;
+        gap: 15px;
+    }
+
+    .large-card, .card {
+        grid-column: span 1 !important;
+        grid-row: span 1 !important;
+        padding: 15px;
+    }
+
+    /* 3. Canvas & Pixelraster flexibel machen, damit es nicht sprengt */
+    #pixelCanvas {
+        width: 100% !important;
+        height: auto !important;
+        max-height: 300px;
+        touch-action: none; /* Verhindert ungewolltes Scrollen beim Zeichnen */
+    }
+
+    /* 4. Die Farbpalette / Werkzeuge direkt unter das Raster holen */
+    .palette-container, .tool-selector {
+        position: relative !important;
+        bottom: auto !important;
+        left: auto !important;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-top: 15px;
+    }
+
+    /* 5. Footer unten festkleben (Sticky Nav), damit er immer erreichbar ist */
+    .minimal-footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(18, 18, 18, 0.95);
+        backdrop-filter: blur(5px);
+        padding: 10px 0;
+        z-index: 1000;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .footer-nav {
+        display: flex;
+        justify-content: space-around;
+        padding: 0 10px;
+    }
+
+        .footer-nav .nav-tab {
+            font-size: 0.75rem;
+            padding: 6px 10px;
+        }
+}
