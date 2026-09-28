@@ -50,14 +50,16 @@ body {
     -webkit-mask-image: radial-gradient(circle 200px at var(--mouse-x, -100%) var(--mouse-y, -100%), black 0%, transparent 100%);
 }
 
+/* 3. Canvas & Pixelraster korrigieren (keine verzerrten Rechtecke) */
 #pixelCanvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    z-index: 0;
-    pointer-events: none;
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100vw !important;
+    height: 100vh !important;
+    pointer-events: auto !important; /* Erlaubt Touch-Eingaben auf dem Handy */
+    touch-action: none; /* Verhindert das unabsichtliche Scrollen beim Malen */
+    z-index: 0 !important;
 }
 
 /* --- 4. TOP NAVIGATION (Für beide Seiten) --- */
@@ -1113,6 +1115,12 @@ body {
         top: 20px;
         padding: 0 20px;
         justify-content: center;
+    }
+
+    /* 4. Sicherstellen, dass alle Buttons und Menüs über dem Canvas liegen */
+    .canvas-glass-container, .minimal-footer, .top-nav, .top-nav-about, .bento-grid {
+        position: relative;
+        z-index: 100 !important;
     }
 
     .studio-logo-centered {
