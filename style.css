@@ -1326,22 +1326,21 @@ body, a, button, label {
         margin-bottom: 40px;
     }
 
-    /* Obere Navigation kompakt und schick oben in den Video-Bereich integrieren */
+    /* Obere Navigation noch etwas mehr Luft nach oben geben */
     .top-nav, .top-nav-about {
         position: absolute !important;
-        top: 15px !important;
+        top: 25px !important;
         left: 0 !important;
         width: 100% !important;
         flex-direction: row !important;
         flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 15px !important;
+        gap: 12px !important;
         padding: 0 10px !important;
         margin-bottom: 0 !important;
         z-index: 50 !important;
     }
 
-        /* Top-Nav Links auf dem Handy etwas kompakter halten, damit sie nebeneinander passen */
         .top-nav a, .top-nav-about a {
             font-size: 0.85rem !important;
             letter-spacing: 1px !important;
@@ -1350,7 +1349,7 @@ body, a, button, label {
             width: auto !important;
         }
 
-    /* Alle anderen Buttons (Footer, Projekte etc.) bleiben schön groß für Wurstfinger */
+    /* Alle anderen Buttons für "Wurstfinger" vergrößern */
     .footer-nav .nav-tab, .press-start-btn, .project-btn, .contact-button {
         font-size: 1.1rem !important;
         padding: 14px 24px !important;
@@ -1366,12 +1365,12 @@ body, a, button, label {
         max-width: 180px;
     }
 
-    /* Dino-Sprechblase: Normal über dem Logo, Zipfel zeigt nach UNTEN zum Dino */
+    /* Dino-Sprechblase: Unter dem Logo, Zipfel zeigt nach OBEN zum Dino */
     .pixel-speech-bubble {
         position: relative !important;
         top: 0 !important;
-        margin-bottom: 20px !important;
-        margin-top: 0 !important;
+        margin-top: 20px !important;
+        margin-bottom: 10px !important;
         right: auto !important;
         left: auto !important;
         font-size: 0.9rem !important;
@@ -1383,27 +1382,27 @@ body, a, button, label {
         margin-right: auto;
     }
 
-        /* Das kleine Eckchen zeigt jetzt nach UNTEN zum Logo */
+        /* Der Zipfel zeigt jetzt nach OBEN (da die Blase unter dem Dino ist) */
         .pixel-speech-bubble::after {
             content: '';
             display: block !important;
             position: absolute;
-            bottom: -10px; /* Platziert den Zipfel unterhalb der Blase */
+            top: -10px; /* Platziert den Zipfel oberhalb der Blase */
             left: 50%;
             transform: translateX(-50%);
             width: 0;
             height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
-            border-top: 10px solid var(--text-main); /* Zeigt nach unten */
-            border-bottom: none;
+            border-bottom: 10px solid var(--text-main); /* Zeigt nach oben zum Mund */
+            border-top: none;
         }
 
     .logo-wrapper {
         display: flex;
-        flex-direction: column; /* Sprechblase kommt wieder ÜBER das Logo, Zipfel zeigt nach unten drauf */
+        flex-direction: column;
         align-items: center;
-        margin-top: 40px; /* Platz lassen für die obere Nav-Leiste */
+        margin-top: 45px; /* Genug Abstand zur oberen Nav-Leiste */
     }
 
     .studio-tagline {
@@ -1490,7 +1489,7 @@ body, a, button, label {
         height: 300px;
     }
 
-    /* Footer ganz normal unten im Seitenfluss, Buttons untereinander */
+    /* Footer: Mehr Abstand zum "Kontakt aufnehmen"-Button darüber */
     .minimal-footer {
         position: relative;
         bottom: auto;
@@ -1500,7 +1499,7 @@ body, a, button, label {
         backdrop-filter: none;
         padding: 30px 20px;
         border-top: 1px solid var(--border-color);
-        margin-top: 40px;
+        margin-top: 60px; /* Sorgt für genug Puffer zum Mail-Button */
     }
 
     .footer-nav {
