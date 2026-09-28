@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yu Abendroth | Persönliches Profil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="bg-grid"></div>
+    <div id="bg-grid-glow"></div>
+    <canvas id="pixelCanvas"></canvas>
+
+    <div class="portfolio-container">
+
+        <nav class="top-nav-about">
+            <a href="index.html" class="nav-cyan">HOME</a>
+            <a href="about.html" class="nav-pink active">PROFIL</a>
+            <a href="https://itch.io" target="_blank" class="nav-yellow">GAMES</a>
+            <a href="mailto:yuabendroth@gmail.com" class="nav-green">MAIL YU</a>
+        </nav>
+
+        <header class="hero-section">
+            <div class="hero-text">
+                <span class="accent-tag">Hallo, ich bin Yu</span>
+                <h1>Game Developer & <br>UI/UX Designer.</h1>
+                <p>Code-Architektur in C# & Python trifft auf gestaltungstechnische Expertise.</p>
+            </div>
+
+            <div class="profile-container">
+                <div class="pixel-ring inner-ring">
+                    <div class="r-pixel" style="--i:1;"></div><div class="r-pixel" style="--i:2;"></div>
+                    <div class="r-pixel" style="--i:3;"></div><div class="r-pixel" style="--i:4;"></div>
+                    <div class="r-pixel" style="--i:5;"></div><div class="r-pixel" style="--i:6;"></div>
+                    <div class="r-pixel" style="--i:7;"></div><div class="r-pixel" style="--i:8;"></div>
+                    <div class="r-pixel" style="--i:9;"></div><div class="r-pixel" style="--i:10;"></div>
+                    <div class="r-pixel" style="--i:11;"></div><div class="r-pixel" style="--i:12;"></div>
+                    <div class="r-pixel" style="--i:13;"></div><div class="r-pixel" style="--i:14;"></div>
+                    <div class="r-pixel" style="--i:15;"></div><div class="r-pixel" style="--i:16;"></div>
+                    <div class="r-pixel" style="--i:17;"></div><div class="r-pixel" style="--i:18;"></div>
+                </div>
+                <div class="pixel-ring outer-ring">
+                    <div class="r-pixel" style="--i:1;"></div><div class="r-pixel" style="--i:2;"></div>
+                    <div class="r-pixel" style="--i:3;"></div><div class="r-pixel" style="--i:4;"></div>
+                    <div class="r-pixel" style="--i:5;"></div><div class="r-pixel" style="--i:6;"></div>
+                    <div class="r-pixel" style="--i:7;"></div><div class="r-pixel" style="--i:8;"></div>
+                    <div class="r-pixel" style="--i:9;"></div><div class="r-pixel" style="--i:10;"></div>
+                    <div class="r-pixel" style="--i:11;"></div><div class="r-pixel" style="--i:12;"></div>
+                    <div class="r-pixel" style="--i:13;"></div><div class="r-pixel" style="--i:14;"></div>
+                    <div class="r-pixel" style="--i:15;"></div><div class="r-pixel" style="--i:16;"></div>
+                    <div class="r-pixel" style="--i:17;"></div><div class="r-pixel" style="--i:18;"></div>
+                    <div class="r-pixel" style="--i:19;"></div><div class="r-pixel" style="--i:20;"></div>
+                    <div class="r-pixel" style="--i:21;"></div><div class="r-pixel" style="--i:22;"></div>
+                    <div class="r-pixel" style="--i:23;"></div><div class="r-pixel" style="--i:24;"></div>
+                </div>
+                <div class="profile-image-wrapper">
+                    <img src="graphics/ArcadePicture.jpg" alt="Yu Abendroth" class="profile-img img-default">
+                    <img src="graphics/GreifautomatYu.jpg" alt="Yu Abendroth" class="profile-img img-hover">
+                </div>
+            </div>
+        </header>
+
+        <main class="bento-grid">
+            <section class="card wide-card about-card slide-hidden">
+                <h2>Werdegang & Fokus</h2>
+                <p>Angehende Fachkraft für Anwendungsentwicklung. Mein Fokus liegt auf der Entwicklung interaktiver Anwendungen, sauberen Datenbank-Strukturen und ansprechendem Frontend-Design.</p>
+            </section>
+            <section class="card square-card tech-card slide-hidden-right">
+                <h2>Tech Stack</h2>
+                <div class="badge-container">
+                    <span class="badge badge-godot">Godot</span>
+                    <span class="badge badge-csharp">C#</span>
+                    <span class="badge badge-python">Python</span>
+                    <span class="badge badge-sql">SQL</span>
+                    <span class="badge badge-html">HTML/CSS</span>
+                </div>
+            </section>
+            <section class="card large-card project-card slide-hidden">
+                <div class="slideshow-container" id="art-slideshow"></div>
+                <div class="project-info">
+                    <h2>Digitale Illustration & Design</h2>
+                    <p>Konzeption und Umsetzung von detaillierten Character-Sheets, UI-Elementen und animierten Sprite-Sets. Mein Workflow kombiniert fundiertes Gestaltungs-Wissen mit digitalen Werkzeugen.</p>
+                    <div class="badge-container" style="margin-top: 15px;">
+                        <span class="badge" style="color: var(--accent-yellow); border-color: var(--accent-yellow); background-color: rgba(255, 204, 0, 0.1);">Procreate</span>
+                        <span class="badge" style="color: var(--accent-pink); border-color: var(--accent-pink); background-color: rgba(255, 71, 126, 0.1);">Aseprite</span>
+                        <span class="badge" style="color: var(--accent-cyan); border-color: var(--accent-cyan); background-color: rgba(0, 240, 255, 0.1);">Adobe CC</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <section class="stats-row">
+            <div class="stat-item slide-hidden">
+                <span class="stat-number">3+</span><span class="stat-label">Aktive Indie-Projekte</span>
+            </div>
+            <div class="stat-item slide-hidden">
+                <span class="stat-number">10k+</span><span class="stat-label">Zeilen C# Code</span>
+            </div>
+            <div class="stat-item slide-hidden-right">
+                <span class="stat-number">100%</span><span class="stat-label">Pixel Art Leidenschaft</span>
+            </div>
+        </section>
+
+        <section class="journey-section slide-hidden">
+            <h2>Mein Werdegang</h2>
+            <div class="journey-container" id="journey-container">
+                <div class="journey-line-bg"></div>
+                <div class="journey-line-progress" id="journey-progress"></div>
+
+                <div class="journey-item">
+                    <div class="journey-year-container">
+                        <div class="journey-year">2025 - heute</div>
+                    </div>
+                    <div class="journey-content-wrapper">
+                        <div class="journey-image collage-header">
+                            <div class="collage-item portrait"><img src="graphics/UschiUnkrautProjekt.jpg" alt="Uschi Unkraut"></div>
+                            <div class="collage-item landscape-top"><img src="graphics/Uschigruppe.jpg" alt="Uschi Gruppe"></div>
+                            <div class="collage-item landscape-bottom"><img src="https://placehold.co/400x200/2A2E37/00E676?text=Querformat+2" alt="Platzhalter"></div>
+                        </div>
+                        <div class="journey-text">
+                            <h3>Fachinformatik für Anwendungsentwicklung</h3>
+                            <p>Umschulung am BFW Köln. Fokus auf komplexe Logikstrukturen in C# und Python.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="journey-item">
+                    <div class="journey-year-container">
+                        <div class="journey-year">2016 - 2023</div>
+                    </div>
+                    <div class="journey-content-wrapper">
+                        <div class="journey-image" style="position: relative; height: auto;">
+                            <img src="graphics/SchlossTripsInnereVorburgTordurchfahrt.jpg" alt="Altenheim Burg" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="license-overlay">
+                                Foto: Christopher Friese / CC BY-SA 4.0 / Wikimedia Commons
+                            </div>
+                        </div>
+                        <div class="journey-text">
+                            <h3>Pflegefachkraft & Intensivpflege</h3>
+                            <p>Mehrjährige Berufserfahrung als examinierte Pflegefachkraft. Hohe Stressresistenz und Teamfähigkeit in herausfordernden Situationen.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="journey-item">
+                    <div class="journey-year-container">
+                        <div class="journey-year">2012 - 2015</div>
+                    </div>
+                    <div class="journey-content-wrapper">
+                        <div class="journey-image collage-header collage-reversed">
+                            <div class="collage-item portrait"><img src="https://placehold.co/300x400/2A2E37/00F0FF?text=Hochformat" alt="Platzhalter"></div>
+                            <div class="collage-item landscape-top"><img src="https://placehold.co/400x200/2A2E37/FF477E?text=Querformat+1" alt="Platzhalter"></div>
+                            <div class="collage-item landscape-bottom"><img src="https://placehold.co/400x200/2A2E37/00E676?text=Querformat+2" alt="Platzhalter"></div>
+                        </div>
+                        <div class="journey-text">
+                            <h3>Gestaltungstechnische Assistenz</h3>
+                            <p>Berufskolleg Aachen. Fundierte Ausbildung in UI/UX, Layout und visueller Gestaltung.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="minimal-footer">
+            <p>Bereit für spannende Code-Architektur?</p>
+            <a href="mailto:yuabendroth@gmail.com" class="contact-button">Lass uns zusammenarbeiten!</a>
+            <nav class="footer-nav slide-hidden">
+                <a href="index.html" class="nav-tab tab-cyan">Studio & Games</a>
+                <a href="about.html" class="nav-tab tab-pink active">Entwickler Profil</a>
+                <a href="impressum.html" class="nav-tab tab-yellow">Impressum</a>
+            </nav>
+        </footer>
+    </div>
+
+    <!-- Schwebende Pixel-Tiere -->
+    <div class="floating-pixel-container">
+        <div class="pixel-shape bug"></div>
+        <div class="pixel-shape cat"></div>
+        <div class="pixel-shape heart"></div>
+        <div class="pixel-shape pokeball"></div>
+        <div class="pixel-shape pikachu"></div>
+        <div class="pixel-shape triforce"></div>
+        <div class="pixel-shape strawberry"></div>
+        <div class="pixel-shape boba"></div>
+    </div>
+
+    <!-- Interaktiver Glas-Button für Canvas-Tools -->
+    <div class="canvas-glass-container">
+        <input type="checkbox" id="toggle-hint" class="hint-checkbox">
+        <div class="glass-panel">
+            <p><strong>Linksklick:</strong> Pixel malen</p>
+            <p><strong>Rechtsklick:</strong> Pixel löschen</p>
+            <hr class="panel-divider">
+            <button id="clear-canvas-btn" class="clear-btn">🗑️ Leinwand leeren</button>
+        </div>
+        <label for="toggle-hint" class="glass-button" title="Zeichen-Tools öffnen">🎨</label>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
