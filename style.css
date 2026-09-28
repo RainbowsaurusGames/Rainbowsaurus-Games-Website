@@ -1322,43 +1322,56 @@ body, a, button, label {
     /* Hauptcontainer anpassen */
     .portfolio-container {
         padding: 10px;
-        margin-top: 20px; /* Mehr Abstand nach oben für das Logo */
+        margin-top: 20px;
         margin-bottom: 40px;
     }
 
-    /* Obere Navigation entzerren und nach oben schieben, damit sie nicht im Logo hängt */
+    /* Obere Navigation kompakt und schick oben in den Video-Bereich integrieren */
     .top-nav, .top-nav-about {
-        position: relative !important;
-        top: 0 !important;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
-        padding: 10px 0 20px 0;
-        margin-bottom: 20px;
+        position: absolute !important;
+        top: 15px !important;
+        left: 0 !important;
+        width: 100% !important;
+        flex-direction: row !important;
+        flex-wrap: wrap !important;
+        justify-content: center !important;
+        gap: 15px !important;
+        padding: 0 10px !important;
+        margin-bottom: 0 !important;
+        z-index: 50 !important;
     }
 
-        /* Alle Buttons und Links für "Wurstfinger" vergrößern */
-        .top-nav a, .top-nav-about a, .footer-nav .nav-tab, .press-start-btn, .project-btn, .contact-button {
-            font-size: 1.1rem !important;
-            padding: 14px 24px !important;
-            min-height: 48px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 100%;
-            text-align: center;
+        /* Top-Nav Links auf dem Handy etwas kompakter halten, damit sie nebeneinander passen */
+        .top-nav a, .top-nav-about a {
+            font-size: 0.85rem !important;
+            letter-spacing: 1px !important;
+            padding: 5px 8px !important;
+            min-height: auto !important;
+            width: auto !important;
         }
+
+    /* Alle anderen Buttons (Footer, Projekte etc.) bleiben schön groß für Wurstfinger */
+    .footer-nav .nav-tab, .press-start-btn, .project-btn, .contact-button {
+        font-size: 1.1rem !important;
+        padding: 14px 24px !important;
+        min-height: 48px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        text-align: center;
+    }
 
     .studio-logo-centered {
         max-width: 180px;
     }
 
-    /* Dino-Sprechblase unter dem Logo mit Zipfel nach OBEN */
+    /* Dino-Sprechblase: Normal über dem Logo, Zipfel zeigt nach UNTEN zum Dino */
     .pixel-speech-bubble {
         position: relative !important;
         top: 0 !important;
-        margin-top: 20px !important;
-        margin-bottom: 15px !important;
+        margin-bottom: 20px !important;
+        margin-top: 0 !important;
         right: auto !important;
         left: auto !important;
         font-size: 0.9rem !important;
@@ -1370,27 +1383,27 @@ body, a, button, label {
         margin-right: auto;
     }
 
-        /* Das kleine Eckchen zeigt jetzt nach OBEN zur Blase */
+        /* Das kleine Eckchen zeigt jetzt nach UNTEN zum Logo */
         .pixel-speech-bubble::after {
             content: '';
             display: block !important;
             position: absolute;
-            top: -10px; /* Platziert den Zipfel oberhalb der Blase */
+            bottom: -10px; /* Platziert den Zipfel unterhalb der Blase */
             left: 50%;
             transform: translateX(-50%);
             width: 0;
             height: 0;
             border-left: 10px solid transparent;
             border-right: 10px solid transparent;
-            border-bottom: 10px solid var(--text-main); /* Zeigt nach oben */
-            border-top: none;
+            border-top: 10px solid var(--text-main); /* Zeigt nach unten */
+            border-bottom: none;
         }
 
     .logo-wrapper {
         display: flex;
-        flex-direction: column-reverse; /* Dreht die Reihenfolge um: Logo oben, Blase darunter */
+        flex-direction: column; /* Sprechblase kommt wieder ÜBER das Logo, Zipfel zeigt nach unten drauf */
         align-items: center;
-        margin-top: 10px;
+        margin-top: 40px; /* Platz lassen für die obere Nav-Leiste */
     }
 
     .studio-tagline {
