@@ -1441,3 +1441,47 @@ body, a, button, label {
     color: var(--text-muted);
     line-height: 1.5;
 }
+
+/* Styling für Links im News-Text */
+.news-link {
+    color: var(--item-color); /* Übernimmt die Farbe aus der JSON! */
+    text-decoration: none;
+    font-weight: bold;
+    border-bottom: 1px dashed var(--item-color);
+    transition: opacity 0.3s ease;
+}
+
+    .news-link:hover {
+        opacity: 0.7;
+    }
+
+/* Styling für eingebettete Bilder */
+.news-media {
+    margin: 15px 0 10px 0;
+    border-radius: 6px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    background-color: #000;
+}
+
+    .news-media img {
+        width: 100%;
+        height: auto;
+        display: block;
+        image-rendering: pixelated; /* Erhält den Pixel-Art-Look */
+    }
+
+/* Styling für die Bildunterschrift */
+.news-caption {
+    background: rgba(0, 0, 0, 0.6);
+    color: var(--text-muted);
+    font-size: 0.75rem;
+    padding: 6px 12px;
+    text-align: right;
+    font-family: 'Courier New', Courier, monospace;
+    border-top: 1px dashed rgba(255, 255, 255, 0.1);
+}
+
+.news-meta {
+    flex-wrap: wrap; /* Lässt Tags in die nächste Zeile umbrechen, wenn es zu viele sind */
+}

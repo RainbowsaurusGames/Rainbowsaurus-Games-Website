@@ -392,17 +392,42 @@ if (newsFeed) {
             data.forEach(news => {
                 const article = document.createElement('div');
                 article.className = 'news-item';
-                // Dynamische Farbe aus der JSON ziehen
-                article.style.setProperty('--item-color', news.color || 'var(--accent-cyan)');
 
+                // Setzt die Hauptfarbe für den ganzen Eintrag (Border & Links)
+                const mainColor = news.color || 'var(--accent-cyan)';
+                article.style.setProperty('--item-color', mainColor);
+
+                // 1. Tags zusammenbauen (unterstützt jetzt ein Array von Tags)
+                let tagsHTML = '';
+                if (Array.isArray(news.tags)) {
+                    news.tags.forEach(tag => {
+                        tagsHTML += `<span class="news-tag" style="color: ${mainColor}; border: 1px solid ${mainColor}40;">${tag}</span>`;
+                    });
+                }
+
+                // 2. Bild & Untertitel zusammenbauen (nur wenn ein Bild angegeben ist)
+                let mediaHTML = '';
+                if (news.image) {
+                    let captionHTML = news.caption ? `<figcaption class="news-caption">${news.caption}</figcaption>` : '';
+                    mediaHTML = `
+                        <figure class="news-media">
+                            <img src="${news.image}" alt="${news.title}">
+                            ${captionHTML}
+                        </figure>
+                    `;
+                }
+
+                // 3. Alles in das HTML-Gerüst gießen
                 article.innerHTML = `
                     <div class="news-meta">
                         <span class="news-date">${news.date}</span>
-                        <span class="news-tag" style="color: ${news.color || 'var(--accent-cyan)'}">${news.tag}</span>
+                        ${tagsHTML}
                     </div>
                     <h4 class="news-title">${news.title}</h4>
                     <p class="news-content">${news.content}</p>
+                    ${mediaHTML}
                 `;
+
                 newsFeed.appendChild(article);
             });
         })
