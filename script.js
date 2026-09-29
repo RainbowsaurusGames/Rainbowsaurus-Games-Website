@@ -331,3 +331,28 @@ if (dinoBubble) {
         dinoBubble.classList.add('show-bubble');
     }, 2500);
 }
+
+
+/* --- AUTOMATISCHE SPRACHERKENNUNG (VORERST DEAKTIVIERT) ---
+if (!localStorage.getItem('langPref')) {
+    // Prüfen, ob der Browser auf Deutsch gestellt ist
+    if (navigator.language.startsWith('de')) {
+        localStorage.setItem('langPref', 'de');
+        
+        // Aktuelle Datei aus der URL auslesen
+        let path = window.location.pathname;
+        let page = path.split('/').pop();
+        
+        // Falls die URL auf dem Hauptverzeichnis endet (z. B. ohne "index.html")
+        if (page === '' || !page.includes('.html')) {
+            page = 'index.html';
+        }
+        
+        // Nur weiterleiten, wenn wir nicht sowieso schon auf einer "_de"-Seite sind
+        if (!page.includes('_de.html')) {
+            let targetPage = page.replace('.html', '_de.html');
+            window.location.href = targetPage;
+        }
+    }
+}
+*/

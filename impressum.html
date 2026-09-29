@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impressum | Rainbowsaurus Games</title>
-    <meta name="robots" content="noindex, follow"> <!-- Sorgt dafür, dass das Impressum nicht unnötig in Google gelistet wird, aber Links verfolgt werden -->
+    <title>Legal Notice | Rainbowsaurus Games</title>
+    <meta name="robots" content="noindex, follow"> 
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -14,33 +14,35 @@
 
     <nav class="top-nav">
         <a href="index.html" class="nav-cyan">HOME</a>
-        <a href="about.html" class="nav-pink">PROFIL</a>
+        <a href="about.html" class="nav-pink">PROFILE</a>
         <a href="https://itch.io" target="_blank" class="nav-yellow">GAMES</a>
         <a href="mailto:yuabendroth@gmail.com" class="nav-green">MAIL YU</a>
+        <a href="impressum_de.html" class="nav-lang flag-de" onclick="localStorage.setItem('langPref', 'de')">DE</a>
     </nav>
 
     <div class="portfolio-container" style="margin-top: 120px;">
         <main class="bento-grid">
             <section class="card large-card slide-hidden" style="display: block;">
-                <h1 style="color: var(--accent-yellow); margin-bottom: 20px;">Impressum</h1>
-                <p style="color: var(--text-muted); margin-bottom: 30px;">Angaben gemäß § 5 TMG</p>
+                <h1 style="color: var(--accent-yellow); margin-bottom: 20px;">Legal Notice (Impressum)</h1>
+                <p style="color: var(--text-muted); margin-bottom: 30px;">Information according to § 5 TMG (German Telemedia Act)</p>
                 
-                <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">Betreiber der Website</h3>
+                <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">Website Operator</h3>
                 <p>
                     Yu Abendroth<br>
-                    Rainbowsaurus Gameses<br>
+                    Rainbowsaurus Games<br>
                     Am Muldenpfad 14<br>
-                    52499 Baesweiler
+                    52499 Baesweiler<br>
+                    Germany
                 </p>
                 
                 <br>
-                <h3 style="color: var(--accent-pink); margin-bottom: 10px;">Kontakt</h3>
-                <p>E-Mail: yuabendroth@gmail.com</p>
+                <h3 style="color: var(--accent-pink); margin-bottom: 10px;">Contact</h3>
+                <p>Email: yuabendroth@gmail.com</p>
 
                 <br><br>
                 <hr style="border: none; border-top: 1px dashed var(--border-color); margin-bottom: 20px;">
                 <p style="font-size: 0.85rem; color: var(--text-muted);">
-                    <strong>Haftungsausschluss:</strong> Trotz sorgfältiger inhaltlicher Kontrolle übernehme ich keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich.
+                    <strong>Disclaimer:</strong> Despite careful content control, I assume no liability for the content of external links. The operators of the linked pages are solely responsible for their content.
                 </p>
             </section>
         </main>
@@ -48,10 +50,34 @@
         <footer class="minimal-footer">
             <nav class="footer-nav">
                 <a href="index.html" class="nav-tab tab-cyan">Studio & Games</a>
-                <a href="about.html" class="nav-tab tab-pink">Entwickler Profil</a>
-                <a href="impressum.html" class="nav-tab tab-yellow active">Impressum</a>
+                <a href="about.html" class="nav-tab tab-pink">Developer Profile</a>
+                <a href="impressum.html" class="nav-tab tab-yellow active">Legal Notice</a>
             </nav>
         </footer>
+    </div>
+
+    <!-- Floating Pixel Icons -->
+    <div class="floating-pixel-container">
+        <div class="pixel-shape bug"></div>
+        <div class="pixel-shape cat"></div>
+        <div class="pixel-shape heart"></div>
+        <div class="pixel-shape pokeball"></div>
+        <div class="pixel-shape pikachu"></div>
+        <div class="pixel-shape triforce"></div>
+        <div class="pixel-shape strawberry"></div>
+        <div class="pixel-shape boba"></div>
+    </div>
+
+    <!-- Interactive Glass Button -->
+    <div class="canvas-glass-container">
+        <input type="checkbox" id="toggle-hint" class="hint-checkbox">
+        <div class="glass-panel">
+            <p><strong>Left Click:</strong> Draw pixel</p>
+            <p><strong>Right Click:</strong> Erase pixel</p>
+            <hr class="panel-divider">
+            <button id="clear-canvas-btn" class="clear-btn">🗑️ Clear Canvas</button>
+        </div>
+        <label for="toggle-hint" class="glass-button" title="Open Drawing Tools">🎨</label>
     </div>
 
     <script src="script.js"></script>
