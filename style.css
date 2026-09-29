@@ -1303,8 +1303,14 @@ body, a, button, label {
     text-overflow: ellipsis;
 }
 
-/* --- 16. RESPONSIVE DESIGN (Handy-Ansicht) --- */
-@media screen and (max-width: 768px) {
+/* --- 2. GRUNDLAGEN (Ergänzung gegen horizontales Wackeln) --- */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden !important;
+}
+
+/* --- 16. RESPONSIVE DESIGN (Handy- & Tablet-Ansicht) --- */
+@media screen and (max-width: 1024px) {
     /* Standard-Cursor für Touch wieder aktivieren */
     body, a, button, label {
         cursor: auto !important;
@@ -1314,22 +1320,25 @@ body, a, button, label {
         display: none !important;
     }
 
-    /* Pixelmalerei & Farbpalette auf Handys komplett ausblenden */
+    /* Pixelmalerei & Farbpalette auf mobilen Geräten komplett ausblenden */
     #pixelCanvas, .canvas-glass-container {
         display: none !important;
     }
 
-    /* Pixeltiere für den mobilen Viewport skalieren, damit sie im Raster bleiben */
+    /* Pixeltiere einrahmen, damit sie kein horizontales Scrollen mehr erzwingen */
     .floating-pixel-container {
-        max-width: 100vw;
+        position: absolute;
+        width: 100%;
         overflow: hidden;
+        pointer-events: none;
     }
 
     /* Hauptcontainer anpassen */
     .portfolio-container {
-        padding: 10px;
+        padding: 15px;
         margin-top: 20px;
         margin-bottom: 40px;
+        max-width: 100%;
     }
 
     /* Obere Navigation */
@@ -1355,7 +1364,7 @@ body, a, button, label {
             width: auto !important;
         }
 
-    /* Alle Buttons im System für "Wurstfinger" groß machen */
+    /* Alle Buttons für Touch vergrößern */
     .footer-nav .nav-tab, .press-start-btn, .project-btn, .contact-button {
         font-size: 1.1rem !important;
         padding: 14px 24px !important;
@@ -1371,12 +1380,20 @@ body, a, button, label {
         max-width: 180px;
     }
 
-    /* SPRECHBLASE: Sauber ÜBER dem Dino platziert mit gutem Abstand */
+    /* LOGO-WRAPPER & SPRECHBLASE: Zwingend Blase OBEN, Dino UNTEN mit sauberem Abstand */
+    .logo-wrapper {
+        display: flex;
+        flex-direction: column !important; /* Blase wird im HTML vor dem Logo geladen und bleibt oben */
+        align-items: center;
+        margin-top: 50px;
+        width: 100%;
+    }
+
     .pixel-speech-bubble {
         position: relative !important;
         top: 0 !important;
-        margin-top: 10px !important;
-        margin-bottom: 30px !important; /* Deutlicher Abstand nach unten zum Dino-Logo */
+        margin-top: 0 !important;
+        margin-bottom: 25px !important; /* Abstand zum Logo darunter */
         right: auto !important;
         left: auto !important;
         font-size: 0.9rem !important;
@@ -1388,7 +1405,7 @@ body, a, button, label {
         margin-right: auto;
     }
 
-        /* Asymmetrischer Zipfel rechts unten, der zum Dino-Mund zeigt */
+        /* Asymmetrischer Zipfel rechts unten, der nach unten zum Dino zeigt */
         .pixel-speech-bubble::after {
             content: '';
             display: block !important;
@@ -1403,13 +1420,6 @@ body, a, button, label {
             border-top: 10px solid var(--text-main);
             border-bottom: none;
         }
-
-    .logo-wrapper {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 50px;
-    }
 
     .studio-tagline {
         font-size: 1rem;
@@ -1495,7 +1505,7 @@ body, a, button, label {
         height: 300px;
     }
 
-    /* FOOTER: Einheitliches Flex-Layout, damit alle Buttons exakt denselben Abstand zueinander haben */
+    /* FOOTER */
     .minimal-footer {
         position: relative;
         bottom: auto;
@@ -1509,7 +1519,7 @@ body, a, button, label {
         display: flex;
         flex-direction: column;
         align-items: center;
-        gap: 15px; /* Erzwingt exakt denselben Abstand zwischen allen Elementen im Footer */
+        gap: 15px;
     }
 
         .minimal-footer p {
@@ -1523,7 +1533,7 @@ body, a, button, label {
 
     .footer-nav {
         flex-direction: column;
-        gap: 15px; /* Identischer Abstand für die Nav-Tabs */
+        gap: 15px;
         padding: 0;
         margin-top: 0;
         width: 100%;
