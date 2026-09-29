@@ -1465,7 +1465,7 @@ body, a, button, label {
 }
 
     .news-media img {
-        width: 80%;
+        width: 100%;
         height: auto;
         display: block;
         image-rendering: pixelated; /* Erhält den Pixel-Art-Look */
