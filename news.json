@@ -2,45 +2,45 @@
   {
     "date": "2026-09-20",
     "tag": "UPDATE",
-    "title": "Website Launch & Sprachauswahl",
-    "content": "Die neue Rainbowsaurus Games Website ist offiziell live! Komplett mit Mobile-Optimierung, verstecktem Zeichen-Canvas und automatischer Sprachumschaltung.",
+    "title": "Website Launch & Language Selection",
+    "content": "The new Rainbowsaurus Games website is officially live! Complete with mobile optimization, a hidden drawing canvas, and automatic language switching.",
     "color": "var(--accent-cyan)"
   },
   {
     "date": "2026-08-30",
     "tag": "EVENT",
     "title": "Gamescom 2026 Recap",
-    "content": "Wow, was für eine Woche in Köln! Es war großartig, sich mit anderen Indie-Entwicklern auszutauschen und jede Menge frische Motivation für die weitere Entwicklung an Wandersoul zu tanken.",
+    "content": "Wow, what a week in Cologne! It was great to connect with other indie developers and gather lots of fresh motivation for the continued development of Wandersoul.",
     "color": "var(--accent-pink)"
   },
   {
     "date": "2026-07-15",
     "tag": "GAME JAM",
-    "title": "Buggy Juice geht an den Start",
-    "content": "Der Startschuss für den 'One last night' Game Jam ist gefallen! Wir experimentieren mit Custom Shadern und zuckersüßen Animationen für unser kleines Arcade-Projekt.",
+    "title": "Buggy Juice Kicks Off",
+    "content": "The starting signal for the 'One last night' Game Jam has been fired! We are experimenting with custom shaders and super sweet animations for our little arcade project.",
     "color": "var(--accent-yellow)"
   },
   {
     "date": "2026-10-12",
     "tags": [ "DEVLOG", "WANDERSOUL", "PIXEL ART" ],
-    "title": "Erste Kampfsystem-Tests & neue Sprites",
-    "content": "Die grundlegende Architektur für das Kampfsystem in C# steht! Ich habe heute die ersten Testläufe gemacht. Mehr Details und Gameplay-Gifs gibt es im neuen Devlog auf <a href='https://itch.io' target='_blank' class='news-link'>itch.io</a>.",
+    "title": "First Combat System Tests & New Sprites",
+    "content": "The basic architecture for the combat system in C# is in place! I did the first test runs today. More details and gameplay GIFs can be found in the new devlog on <a href='https://itch.io' target='_blank' class='news-link'>itch.io</a>.",
     "color": "var(--accent-purple)",
     "image": "graphics/Möbelmockup.png",
-    "caption": "Wandersoul: Erstes UI-Konzept für das Zimmer."
+    "caption": "Wandersoul: First UI concept for the room."
   },
   {
     "date": "2026-09-29",
     "tags": [ "STUDIO", "BEHIND THE SCENES" ],
-    "title": "Produktivität leicht gemacht",
-    "content": "Code-Refactoring läuft heute besonders gut. Mochi hat die Qualitätskontrolle auf dem Schreibtisch übernommen.",
+    "title": "Productivity Made Easy",
+    "content": "Code refactoring is going especially well today. Mochi has taken over quality control on the desk.",
     "color": "var(--accent-yellow)"
   },
   {
     "date": "2026-09-20",
     "tag": "UPDATE",
-    "title": "Website Launch & Sprachauswahl",
-    "content": "Die neue Rainbowsaurus Games Website ist offiziell live! Komplett mit Mobile-Optimierung, verstecktem Zeichen-Canvas und automatischer Sprachumschaltung.",
+    "title": "Website Launch & Language Selection",
+    "content": "The new Rainbowsaurus Games website is officially live! Complete with mobile optimization, a hidden drawing canvas, and automatic language switching.",
     "color": "var(--accent-cyan)"
   }
 ]
