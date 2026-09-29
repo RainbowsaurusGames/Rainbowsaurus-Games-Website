@@ -1,0 +1,23 @@
+[
+    {
+        "date": "2026-09-29",
+        "tag": "UPDATE",
+        "title": "Website Relaunch & Sprachauswahl",
+        "content": "Die neue Rainbowsaurus Games Website ist offiziell live! Komplett mit Mobile-Optimierung, verstecktem Zeichen-Canvas und automatischer Sprachumschaltung.",
+        "color": "var(--accent-cyan)"
+    },
+    {
+        "date": "2026-08-30",
+        "tag": "EVENT",
+        "title": "Gamescom 2026 Recap",
+        "content": "Wow, was für eine Woche in Köln! Es war großartig, sich mit anderen Indie-Entwicklern auszutauschen und jede Menge frische Motivation für die weitere Entwicklung an Wandersoul zu tanken.",
+        "color": "var(--accent-pink)"
+    },
+    {
+        "date": "2026-07-15",
+        "tag": "GAME JAM",
+        "title": "Buggy Juice geht an den Start",
+        "content": "Der Startschuss für den 'One last night' Game Jam ist gefallen! Wir experimentieren mit Custom Shadern und zuckersüßen Animationen für unser kleines Arcade-Projekt.",
+        "color": "var(--accent-yellow)"
+    }
+]

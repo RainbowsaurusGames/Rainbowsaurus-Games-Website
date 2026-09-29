@@ -376,3 +376,37 @@ function snapToGrid() {
 // Führt das Snapping beim Neuladen und bei jeder Größenänderung des Fensters aus
 snapToGrid();
 window.addEventListener('resize', snapToGrid);
+
+// --- NEWS FEED AUS JSON LADEN ---
+const newsFeed = document.getElementById('news-feed');
+
+if (newsFeed) {
+    fetch('news.json')
+        .then(response => {
+            if (!response.ok) throw new Error("JSON nicht gefunden");
+            return response.json();
+        })
+        .then(data => {
+            newsFeed.innerHTML = ''; // Lade-Text entfernen
+
+            data.forEach(news => {
+                const article = document.createElement('div');
+                article.className = 'news-item';
+                // Dynamische Farbe aus der JSON ziehen
+                article.style.setProperty('--item-color', news.color || 'var(--accent-cyan)');
+
+                article.innerHTML = `
+                    <div class="news-meta">
+                        <span class="news-date">${news.date}</span>
+                        <span class="news-tag" style="color: ${news.color || 'var(--accent-cyan)'}">${news.tag}</span>
+                    </div>
+                    <h4 class="news-title">${news.title}</h4>
+                    <p class="news-content">${news.content}</p>
+                `;
+                newsFeed.appendChild(article);
+            });
+        })
+        .catch(error => {
+            newsFeed.innerHTML = `<p style="color: var(--accent-red); font-family: monospace;">[ERROR] Konnte SYSTEM.LOG nicht laden. ${error}</p>`;
+        });
+}
