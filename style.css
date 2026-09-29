@@ -1326,7 +1326,7 @@ body, a, button, label {
         margin-bottom: 40px;
     }
 
-    /* Obere Navigation noch etwas mehr Luft nach oben geben */
+    /* Obere Navigation */
     .top-nav, .top-nav-about {
         position: absolute !important;
         top: 25px !important;
@@ -1365,12 +1365,12 @@ body, a, button, label {
         max-width: 180px;
     }
 
-    /* Dino-Sprechblase: Unter dem Logo, Zipfel zeigt nach OBEN zum Dino */
+    /* SPRECHBLASE OBEN: Oberhalb des Dinos mit Abstand, Zipfel rechts unten zum Mund */
     .pixel-speech-bubble {
         position: relative !important;
         top: 0 !important;
-        margin-top: 20px !important;
-        margin-bottom: 10px !important;
+        margin-top: 10px !important;
+        margin-bottom: 25px !important; /* Abstand zum Logo darunter */
         right: auto !important;
         left: auto !important;
         font-size: 0.9rem !important;
@@ -1382,27 +1382,27 @@ body, a, button, label {
         margin-right: auto;
     }
 
-        /* Der Zipfel zeigt jetzt nach OBEN (da die Blase unter dem Dino ist) */
+        /* Asymmetrischer Zipfel rechts unten, der nach unten zum Dino zeigt */
         .pixel-speech-bubble::after {
             content: '';
             display: block !important;
             position: absolute;
-            top: -10px; /* Platziert den Zipfel oberhalb der Blase */
-            left: 50%;
+            bottom: -10px; /* Platziert den Zipfel unterhalb der Blase */
+            left: 75%; /* Asymmetrisch nach rechts verschoben */
             transform: translateX(-50%);
             width: 0;
             height: 0;
-            border-left: 10px solid transparent;
-            border-right: 10px solid transparent;
-            border-bottom: 10px solid var(--text-main); /* Zeigt nach oben zum Mund */
-            border-top: none;
+            border-left: 8px solid transparent;
+            border-right: 8px solid transparent;
+            border-top: 10px solid var(--text-main); /* Zeigt nach unten zum Dino-Mund */
+            border-bottom: none;
         }
 
     .logo-wrapper {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 45px; /* Genug Abstand zur oberen Nav-Leiste */
+        margin-top: 45px;
     }
 
     .studio-tagline {
@@ -1489,7 +1489,7 @@ body, a, button, label {
         height: 300px;
     }
 
-    /* Footer: Mehr Abstand zum "Kontakt aufnehmen"-Button darüber */
+    /* FOOTER: Den Mail-Button (contact-button) mit in den Footer-Container geschoben */
     .minimal-footer {
         position: relative;
         bottom: auto;
@@ -1499,8 +1499,21 @@ body, a, button, label {
         backdrop-filter: none;
         padding: 30px 20px;
         border-top: 1px solid var(--border-color);
-        margin-top: 60px; /* Sorgt für genug Puffer zum Mail-Button */
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
+
+        .minimal-footer p {
+            margin-bottom: 15px;
+        }
+
+        /* Mail-Button direkt im Footer integriert und sauber untereinander gereiht */
+        .minimal-footer .contact-button {
+            margin-bottom: 20px;
+            width: 100%;
+        }
 
     .footer-nav {
         flex-direction: column;
