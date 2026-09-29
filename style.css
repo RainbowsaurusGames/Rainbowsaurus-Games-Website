@@ -1380,7 +1380,7 @@ body, a, button, label {
 
 .terminal-body {
     padding: 20px;
-    max-height: 280px; /* Scrollbar erscheint ab dieser Höhe automatisch */
+    max-height: 600px; /* Scrollbar erscheint ab dieser Höhe automatisch */
     overflow-y: auto;
     display: flex;
     flex-direction: column;
