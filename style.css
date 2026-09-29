@@ -121,28 +121,32 @@ body {
     align-items: center;
     justify-content: center;
     padding: 2px 10px !important;
-    border-radius: 4px;
+    border-radius: 0 !important;
     color: #FFFFFF !important;
     font-size: 0.9rem !important;
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.9) !important;
     letter-spacing: 2px !important;
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    border: none !important; /* Entfernt den störenden Rand komplett */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
 }
 
-.nav-lang:hover {
-    transform: scale(1.1) translateY(-2px);
-    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4);
-}
+    .nav-lang:hover {
+        transform: scale(1.1) translateY(-2px);
+        box-shadow: 0 6px 15px rgba(255, 255, 255, 0.4) !important;
+    }
 
 .flag-de {
-    background: linear-gradient(to bottom, #000000 0%, #000000 33.3%, #FF0000 33.3%, #FF0000 66.6%, #FFCC00 66.6%, #FFCC00 100%);
+    background: linear-gradient(to bottom, #000000 0%, #000000 33.3%, #FF0000 33.3%, #FF0000 66.6%, #FFCC00 66.6%, #FFCC00 100%) !important;
+    background-repeat: no-repeat !important; /* Verhindert das gelbe Durchbluten oben */
+    background-size: 100% 100% !important;
 }
 
 .flag-en {
-    background: linear-gradient(135deg, #012169 0%, #012169 40%, #C8102E 40%, #C8102E 60%, #012169 60%, #012169 100%);
+    background: linear-gradient(135deg, #012169 0%, #012169 40%, #C8102E 40%, #C8102E 60%, #012169 60%, #012169 100%) !important;
+    background-repeat: no-repeat !important;
+    background-size: 100% 100% !important;
 }
 
 /* --- 5. STUDIO STARTSEITE --- */
@@ -227,8 +231,8 @@ body {
 /* SPRECHBLASE */
 .pixel-speech-bubble {
     position: absolute;
-    top: 20px;
-    right: -60px;
+    bottom: 70%; /* Vorher 55% – schiebt die Blase deutlich weiter nach oben */
+    left: 86%; /* Vorher 70% – zieht die Blase weiter nach rechts */
     background-color: var(--text-main);
     color: var(--bg-main);
     font-family: 'Courier New', Courier, monospace;
@@ -1236,6 +1240,7 @@ body, a, button, label {
     .pixel-speech-bubble {
         position: relative !important;
         top: 0 !important;
+        bottom: auto !important;
         margin-top: 0 !important;
         margin-bottom: 25px !important;
         right: auto !important;

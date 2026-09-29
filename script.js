@@ -356,3 +356,23 @@ if (!localStorage.getItem('langPref')) {
     }
 }
 */
+
+// --- FIX FÜR PIXELTIER-RASTER (Grid Snapping) ---
+function snapToGrid() {
+    // Berechnet die aktuelle Fensterbreite und rundet auf das nächste glatte Vielfache von 20 auf
+    const gridWidth = Math.ceil(window.innerWidth / gridSize) * gridSize;
+
+    // Greift sich alle Tiere, die von rechts ins Bild laufen
+    document.querySelectorAll('.cat, .pokeball, .triforce, .boba').forEach(el => {
+        // Das Triforce braucht etwas mehr Anlauf (260px), der Rest startet bei 200px
+        let offset = el.classList.contains('triforce') ? 260 : 200;
+
+        // Löst den krummen rechten CSS-Anker und setzt einen perfekten linken Anker
+        el.style.right = 'auto';
+        el.style.left = (gridWidth + offset) + 'px';
+    });
+}
+
+// Führt das Snapping beim Neuladen und bei jeder Größenänderung des Fensters aus
+snapToGrid();
+window.addEventListener('resize', snapToGrid);
