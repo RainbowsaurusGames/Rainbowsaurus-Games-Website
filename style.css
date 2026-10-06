@@ -1370,10 +1370,14 @@ body, a, button, label {
         left: 50% !important;
         margin-left: -125px !important; /* Zentriert die 250px breite Blase */
         width: 250px !important;
+        height: auto !important; /* Zwingt die Box, sich dem Text anzupassen */
+        white-space: normal !important; /* Verhindert das Ausbrechen des Textes */
+        padding: 12px 15px !important; /* Gibt dem Text wieder etwas Luft zum Atmen */
+        line-height: 1.4 !important;
     }
 
         .profile-bubble::after {
-            left: 50% !important;
+            left: 50% !important; /* Zentriert das Dreieck mittig unter der Blase */
         }
 
     .studio-tagline {
