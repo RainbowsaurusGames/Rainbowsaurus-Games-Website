@@ -1,0 +1,103 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 11 10" shape-rendering="crispEdges">
+  <style>
+    /* Das sind exakt deine Website-Farben! */
+    .c0 { fill: #FF3B30; } /* Rot */
+    .c1 { fill: #FF9500; } /* Orange */
+    .c2 { fill: #FFCC00; } /* Gelb */
+    .c3 { fill: #00E676; } /* Gruen */
+    .c4 { fill: #00F0FF; } /* Cyan */
+    .c5 { fill: #00A896; } /* Petrol */
+    .c6 { fill: #AF52DE; } /* Lila */
+    .c7 { fill: #FF477E; } /* Pink */
+  </style>
+
+  <!-- Reihe 0 -->
+  <rect x="2" y="0" width="1" height="1" class="c2"/>
+  <rect x="3" y="0" width="1" height="1" class="c3"/>
+  <rect x="7" y="0" width="1" height="1" class="c7"/>
+  <rect x="8" y="0" width="1" height="1" class="c0"/>
+
+  <!-- Reihe 1 -->
+  <rect x="1" y="1" width="1" height="1" class="c2"/>
+  <rect x="2" y="1" width="1" height="1" class="c3"/>
+  <rect x="3" y="1" width="1" height="1" class="c4"/>
+  <rect x="4" y="1" width="1" height="1" class="c5"/>
+  <rect x="6" y="1" width="1" height="1" class="c7"/>
+  <rect x="7" y="1" width="1" height="1" class="c0"/>
+  <rect x="8" y="1" width="1" height="1" class="c1"/>
+  <rect x="9" y="1" width="1" height="1" class="c2"/>
+
+  <!-- Reihe 2 -->
+  <rect x="0" y="2" width="1" height="1" class="c2"/>
+  <rect x="1" y="2" width="1" height="1" class="c3"/>
+  <rect x="2" y="2" width="1" height="1" class="c4"/>
+  <rect x="3" y="2" width="1" height="1" class="c5"/>
+  <rect x="4" y="2" width="1" height="1" class="c6"/>
+  <rect x="5" y="2" width="1" height="1" class="c7"/>
+  <rect x="6" y="2" width="1" height="1" class="c0"/>
+  <rect x="7" y="2" width="1" height="1" class="c1"/>
+  <rect x="8" y="2" width="1" height="1" class="c2"/>
+  <rect x="9" y="2" width="1" height="1" class="c3"/>
+  <rect x="10" y="2" width="1" height="1" class="c4"/>
+
+  <!-- Reihe 3 -->
+  <rect x="0" y="3" width="1" height="1" class="c3"/>
+  <rect x="1" y="3" width="1" height="1" class="c4"/>
+  <rect x="2" y="3" width="1" height="1" class="c5"/>
+  <rect x="3" y="3" width="1" height="1" class="c6"/>
+  <rect x="4" y="3" width="1" height="1" class="c7"/>
+  <rect x="5" y="3" width="1" height="1" class="c0"/>
+  <rect x="6" y="3" width="1" height="1" class="c1"/>
+  <rect x="7" y="3" width="1" height="1" class="c2"/>
+  <rect x="8" y="3" width="1" height="1" class="c3"/>
+  <rect x="9" y="3" width="1" height="1" class="c4"/>
+  <rect x="10" y="3" width="1" height="1" class="c5"/>
+
+  <!-- Reihe 4 -->
+  <rect x="0" y="4" width="1" height="1" class="c4"/>
+  <rect x="1" y="4" width="1" height="1" class="c5"/>
+  <rect x="2" y="4" width="1" height="1" class="c6"/>
+  <rect x="3" y="4" width="1" height="1" class="c7"/>
+  <rect x="4" y="4" width="1" height="1" class="c0"/>
+  <rect x="5" y="4" width="1" height="1" class="c1"/>
+  <rect x="6" y="4" width="1" height="1" class="c2"/>
+  <rect x="7" y="4" width="1" height="1" class="c3"/>
+  <rect x="8" y="4" width="1" height="1" class="c4"/>
+  <rect x="9" y="4" width="1" height="1" class="c5"/>
+  <rect x="10" y="4" width="1" height="1" class="c6"/>
+
+  <!-- Reihe 5 -->
+  <rect x="1" y="5" width="1" height="1" class="c6"/>
+  <rect x="2" y="5" width="1" height="1" class="c7"/>
+  <rect x="3" y="5" width="1" height="1" class="c0"/>
+  <rect x="4" y="5" width="1" height="1" class="c1"/>
+  <rect x="5" y="5" width="1" height="1" class="c2"/>
+  <rect x="6" y="5" width="1" height="1" class="c3"/>
+  <rect x="7" y="5" width="1" height="1" class="c4"/>
+  <rect x="8" y="5" width="1" height="1" class="c5"/>
+  <rect x="9" y="5" width="1" height="1" class="c6"/>
+
+  <!-- Reihe 6 -->
+  <rect x="2" y="6" width="1" height="1" class="c0"/>
+  <rect x="3" y="6" width="1" height="1" class="c1"/>
+  <rect x="4" y="6" width="1" height="1" class="c2"/>
+  <rect x="5" y="6" width="1" height="1" class="c3"/>
+  <rect x="6" y="6" width="1" height="1" class="c4"/>
+  <rect x="7" y="6" width="1" height="1" class="c5"/>
+  <rect x="8" y="6" width="1" height="1" class="c6"/>
+
+  <!-- Reihe 7 -->
+  <rect x="3" y="7" width="1" height="1" class="c2"/>
+  <rect x="4" y="7" width="1" height="1" class="c3"/>
+  <rect x="5" y="7" width="1" height="1" class="c4"/>
+  <rect x="6" y="7" width="1" height="1" class="c5"/>
+  <rect x="7" y="7" width="1" height="1" class="c6"/>
+
+  <!-- Reihe 8 -->
+  <rect x="4" y="8" width="1" height="1" class="c4"/>
+  <rect x="5" y="8" width="1" height="1" class="c5"/>
+  <rect x="6" y="8" width="1" height="1" class="c6"/>
+
+  <!-- Reihe 9 -->
+  <rect x="5" y="9" width="1" height="1" class="c6"/>
+</svg>
