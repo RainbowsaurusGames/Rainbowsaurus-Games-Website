@@ -905,7 +905,7 @@ body {
     }
 
 .tab-cyan:hover, .tab-cyan.active { background-color: var(--accent-cyan); border-color: var(--accent-cyan); color: var(--bg-main); box-shadow: 0 0 15px rgba(0, 240, 255, 0.4); }
-.tab-pink:hover, .tab-pink.active { background-color: var(--accent-pink); border-color: var(--accent-pink); color: var(--text-main); box-shadow: 0 0 15px rgba(255, 71, 126, 0.4); }
+.tab-pink:hover, .tab-pink.active { background-color: var(--accent-pink); border-color: var(--accent-pink); color: var(--bg-main); box-shadow: 0 0 15px rgba(255, 71, 126, 0.4); }
 .tab-yellow:hover, .tab-yellow.active { background-color: var(--accent-yellow); border-color: var(--accent-yellow); color: var(--bg-main); box-shadow: 0 0 15px rgba(255, 204, 0, 0.4); }
 .tab-green:hover, .tab-green.active { background-color: var(--accent-green); border-color: var(--accent-green); color: var(--bg-main); box-shadow: 0 0 15px rgba(0, 230, 118, 0.4); }
 
