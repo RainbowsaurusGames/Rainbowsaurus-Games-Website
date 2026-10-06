@@ -1,12 +1,5 @@
 [
   {
-    "date": "2026-09-20",
-    "tag": "UPDATE",
-    "title": "Website Launch & Language Selection",
-    "content": "The new Rainbowsaurus Games website is officially live! Complete with mobile optimization, a hidden drawing canvas, and automatic language switching.",
-    "color": "var(--accent-cyan)"
-  },
-  {
     "date": "2026-08-30",
     "tag": "EVENT",
     "title": "Gamescom 2026 Recap",
@@ -14,20 +7,13 @@
     "color": "var(--accent-pink)"
   },
   {
-    "date": "2026-07-15",
-    "tag": "GAME JAM",
-    "title": "Buggy Juice Kicks Off",
-    "content": "The starting signal for the 'One last night' Game Jam has been fired! We are experimenting with custom shaders and super sweet animations for our little arcade project.",
-    "color": "var(--accent-yellow)"
-  },
-  {
     "date": "2026-10-12",
     "tags": [ "DEVLOG", "WANDERSOUL", "PIXEL ART" ],
     "title": "First Combat System Tests & New Sprites",
-    "content": "The basic architecture for the combat system in C# is in place! I did the first test runs today. More details and gameplay GIFs can be found in the new devlog on <a href='https://itch.io' target='_blank' class='news-link'>itch.io</a>.",
+    "content": "The basic architecture for the combat system in C# is in place! I did the first test runs today. [More details and gameplay GIFs can soon be found in a devlog on <a href='https://itch.io' target='_blank' class='news-link'>itch.io</a>.]",
     "color": "var(--accent-purple)",
-    "image": "graphics/Möbelmockup.png",
-    "caption": "Wandersoul: First UI concept for the room."
+    "image": "graphics/WSLOGO.png",
+    "caption": "Wandersoul: First UI concept for the logo"
   },
   {
     "date": "2026-09-29",
@@ -42,5 +28,12 @@
     "title": "Website Launch & Language Selection",
     "content": "The new Rainbowsaurus Games website is officially live! Complete with mobile optimization, a hidden drawing canvas, and automatic language switching.",
     "color": "var(--accent-cyan)"
+  },
+  {
+    "date": "2026-07-15",
+    "tag": "GAME JAM",
+    "title": "Buggy Juice Kicks Off",
+    "content": "The starting signal for the 'One last night' Game Jam has been fired! We are experimenting with custom shaders and super sweet animations for our little arcade project.",
+    "color": "var(--accent-yellow)"
   }
 ]
