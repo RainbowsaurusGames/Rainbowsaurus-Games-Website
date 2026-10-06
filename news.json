@@ -1,12 +1,5 @@
 [
   {
-    "date": "2026-08-30",
-    "tag": "EVENT",
-    "title": "Gamescom 2026 Recap",
-    "content": "Wow, what a week in Cologne! It was great to connect with other indie developers and gather lots of fresh motivation for the continued development of Wandersoul.",
-    "color": "var(--accent-pink)"
-  },
-  {
     "date": "2026-10-12",
     "tags": [ "DEVLOG", "WANDERSOUL", "PIXEL ART" ],
     "title": "First Combat System Tests & New Sprites",
@@ -28,6 +21,13 @@
     "title": "Website Launch & Language Selection",
     "content": "The new Rainbowsaurus Games website is officially live! Complete with mobile optimization, a hidden drawing canvas, and automatic language switching.",
     "color": "var(--accent-cyan)"
+  },
+  {
+    "date": "2026-08-30",
+    "tag": "EVENT",
+    "title": "Gamescom 2026 Recap",
+    "content": "Wow, what a week in Cologne! It was great to connect with other indie developers and gather lots of fresh motivation for the continued development of Wandersoul. Lots of people made navigating through the masses harder though and the drinks were more expensive than petroleum, heh! I saw a Luigi drown himself in Apfelschorle when he opened the bottle too fast with a 'MAMMA MIA!' XD",
+    "color": "var(--accent-pink)"
   },
   {
     "date": "2026-07-15",
