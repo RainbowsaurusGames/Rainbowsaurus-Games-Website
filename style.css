@@ -1363,21 +1363,42 @@ body, a, button, label {
             border-bottom: none;
         }
 
+    /* Dino-Sprechblase Handy-Fix: Dreieck nach oben drehen */
+    #dino-bubble {
+        margin-top: 15px !important; /* Etwas Abstand zum Dino-Kopf */
+    }
+
+        #dino-bubble::after {
+            top: -10px !important; /* Setzt das Dreieck an die Oberkante */
+            bottom: auto !important; /* Deaktiviert die Unterkante */
+            left: 50% !important; /* Zentriert das Dreieck */
+            transform: translateX(-50%) !important;
+            border-top: none !important; /* Entfernt das alte nach-unten-Dreieck */
+            border-bottom: 10px solid var(--text-main) !important; /* Malt ein neues nach-oben-Dreieck */
+        }
+
     /* Easter Egg Handy-Fix */
     .profile-bubble {
         position: absolute !important;
         bottom: 95% !important;
         left: 50% !important;
-        margin-left: -125px !important; /* Zentriert die 250px breite Blase */
+        margin-left: -125px !important;
         width: 250px !important;
-        height: auto !important; /* Zwingt die Box, sich dem Text anzupassen */
-        white-space: normal !important; /* Verhindert das Ausbrechen des Textes */
-        padding: 12px 15px !important; /* Gibt dem Text wieder etwas Luft zum Atmen */
+        min-height: 85px !important; /* Zwingt die Box IMMER weit genug auf */
+        display: flex !important; /* Flexbox repariert das eingedrückte Innenleben */
+        flex-direction: column !important;
+        align-items: center !important; /* Zentriert den Text vertikal */
+        justify-content: center !important; /* Zentriert horizontal */
+        white-space: normal !important;
         line-height: 1.4 !important;
+        padding: 15px !important;
+        transform-origin: bottom center !important; /* Wächst sauber aus der Mitte heraus */
+        box-sizing: border-box !important;
     }
 
         .profile-bubble::after {
-            left: 50% !important; /* Zentriert das Dreieck mittig unter der Blase */
+            left: 50% !important;
+            margin-left: -8px !important; /* Positioniert das kleine Sprechblasen-Dreieck exakt mittig */
         }
 
     .studio-tagline {
