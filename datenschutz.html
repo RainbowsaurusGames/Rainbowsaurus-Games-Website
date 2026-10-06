@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Rainbowsaurus Games</title>
+    <meta name="robots" content="noindex, follow"> 
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/svg+xml" href="graphics/favicon.svg">
+</head>
+<body>
+    <div id="bg-grid"></div>
+    <div id="bg-grid-glow"></div>
+    <canvas id="pixelCanvas"></canvas>
+
+    <nav class="top-nav">
+        <a href="index.html" class="nav-cyan">HOME</a>
+        <a href="about.html" class="nav-pink">PROFILE</a>
+        <a href="https://itch.io" target="_blank" class="nav-yellow">GAMES</a>
+        <a href="mailto:yuabendroth@gmail.com" class="nav-animated">MAIL YU</a>
+        <a href="datenschutz_de.html" class="nav-lang flag-de" onclick="localStorage.setItem('langPref', 'de')">DE</a>
+    </nav>
+
+    <div class="portfolio-container" style="margin-top: 120px;">
+        <main class="bento-grid">
+            <section class="card large-card slide-hidden" style="display: block;">
+                <h1 style="color: var(--accent-green); margin-bottom: 20px;">Privacy Policy</h1>
+                
+                <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">1. Privacy at a Glance</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">
+                    The following notes provide a simple overview of what happens to your personal data when you visit this website. Personal data comprises all data that can be used to personally identify you.
+                </p>
+
+                <h3 style="color: var(--accent-pink); margin-bottom: 10px;">2. Responsible Party (Controller)</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">
+                    The party responsible for data processing on this website is:<br><br>
+                    Yu Abendroth<br>
+                    Rainbowsaurus Games<br>
+                    Am Muldenpfad 14<br>
+                    52499 Baesweiler<br>
+                    Germany<br><br>
+                    Email: yuabendroth@gmail.com
+                </p>
+
+                <h3 style="color: var(--accent-yellow); margin-bottom: 10px;">3. Hosting (GitHub Pages)</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">
+                    This website is hosted by GitHub Pages (Provider: GitHub Inc., 88 Colin P Kelly Jr St, San Francisco, CA 94107, USA). When you visit this website, GitHub automatically collects connection data in so-called server log files (e.g., your IP address, browser type, operating system, and time of access). This is technically necessary to deliver the website reliably and to protect it from cyberattacks. The data is collected on the basis of Art. 6(1)(f) GDPR (legitimate interest in the secure provision of the website).
+                </p>
+
+                <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">4. Data Collection on this Website (Local Storage)</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">
+                    This website does <strong>not</strong> use tracking cookies or analytics tools (such as Google Analytics). However, we use your browser's "Local Storage" for two purely technical and functional features:<br><br>
+                    <strong>1. Language Selection:</strong> Your preferred language setting (English or German) is saved locally in your browser so you don't have to be redirected again on your next visit.<br>
+                    <strong>2. Pixel Canvas:</strong> When you draw using the on-screen tools, the coordinates and colors of your pixels are saved locally on your device so your artwork remains intact when you reload the page.<br><br>
+                    Both datasets never leave your device, are not transmitted to any server, and cannot be viewed by us. You can delete this data at any time by clicking "Clear Canvas" in the drawing tools or by clearing your browser's cache.
+                </p>
+
+                <h3 style="color: var(--accent-pink); margin-bottom: 10px;">5. Contact by Email</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">
+                    If you send me a request via email, your details from the email, including the contact details you provided (e.g., your email address), will be stored by me for the purpose of processing the request and in case of follow-up questions. I will not share this information without your consent. The processing of this data is based on Art. 6(1)(b) GDPR if your request is related to the execution of a contract, or on Art. 6(1)(f) GDPR (legitimate interest in the effective processing of requests).
+                </p>
+
+                <h3 style="color: var(--accent-yellow); margin-bottom: 10px;">6. Your Rights</h3>
+                <p style="color: var(--text-muted); margin-bottom: 20px;">
+                    You have the right to request information about the origin, recipients, and purpose of your stored personal data at any time, free of charge. You also have the right to request that this data be corrected or deleted. If you have given your consent to data processing, you can revoke this consent at any time for the future. Simply contact me at the email address provided above.
+                </p>
+            </section>
+        </main>
+
+        <footer class="minimal-footer">
+            <nav class="footer-nav">
+                <a href="index.html" class="nav-tab tab-cyan">Studio & Games</a>
+                <a href="about.html" class="nav-tab tab-pink">Developer Profile</a>
+                <a href="impressum.html" class="nav-tab tab-yellow">Legal Notice</a>
+                <a href="datenschutz.html" class="nav-tab tab-green active">Privacy Policy</a>
+            </nav>
+        </footer>
+    </div>
+
+    <!-- Floating Pixel Icons -->
+    <div class="floating-pixel-container">
+        <div class="pixel-shape bug"></div>
+        <div class="pixel-shape cat"></div>
+        <div class="pixel-shape heart"></div>
+        <div class="pixel-shape pokeball"></div>
+        <div class="pixel-shape pikachu"></div>
+        <div class="pixel-shape triforce"></div>
+        <div class="pixel-shape strawberry"></div>
+        <div class="pixel-shape boba"></div>
+        <div class="pixel-shape smiley"></div>
+        <div class="pixel-shape paw"></div>
+        <div class="pixel-shape skull"></div>
+        <div class="pixel-shape gamepad"></div>
+    </div>
+
+    <!-- Interactive Glass Button -->
+    <div class="canvas-glass-container">
+        <input type="checkbox" id="toggle-hint" class="hint-checkbox">
+        <div class="glass-panel">
+            <p><strong>Left Click:</strong> Draw pixel</p>
+            <p><strong>Right Click:</strong> Erase pixel</p>
+            <hr class="panel-divider">
+            <button id="clear-canvas-btn" class="clear-btn">🗑️ Clear Canvas</button>
+        </div>
+        <label for="toggle-hint" class="glass-button" title="Open Drawing Tools">🎨</label>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

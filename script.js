@@ -312,7 +312,6 @@ randomizePixelLanes();
 const dinoBubble = document.getElementById('dino-bubble');
 
 if (dinoBubble) {
-    // Hier kannst du all deine Arcade-Sprüche eintragen (\n macht einen Zeilenumbruch)
     const bubbleTexts = [
         "RAWR!",
         "PRESS START\nTO PLAY!",
@@ -322,58 +321,26 @@ if (dinoBubble) {
         "PET MOCHI!"
     ];
 
-    // Wählt einen zufälligen Spruch aus der Liste
     const randomText = bubbleTexts[Math.floor(Math.random() * bubbleTexts.length)];
     dinoBubble.innerText = randomText;
 
-    // Lässt die Blase nach 2,5 Sekunden aufploppen
     setTimeout(() => {
         dinoBubble.classList.add('show-bubble');
     }, 2500);
 }
 
-
-/* --- AUTOMATISCHE SPRACHERKENNUNG (VORERST DEAKTIVIERT) ---
-if (!localStorage.getItem('langPref')) {
-    // Prüfen, ob der Browser auf Deutsch gestellt ist
-    if (navigator.language.startsWith('de')) {
-        localStorage.setItem('langPref', 'de');
-        
-        // Aktuelle Datei aus der URL auslesen
-        let path = window.location.pathname;
-        let page = path.split('/').pop();
-        
-        // Falls die URL auf dem Hauptverzeichnis endet (z. B. ohne "index.html")
-        if (page === '' || !page.includes('.html')) {
-            page = 'index.html';
-        }
-        
-        // Nur weiterleiten, wenn wir nicht sowieso schon auf einer "_de"-Seite sind
-        if (!page.includes('_de.html')) {
-            let targetPage = page.replace('.html', '_de.html');
-            window.location.href = targetPage;
-        }
-    }
-}
-*/
-
 // --- FIX FÜR PIXELTIER-RASTER (Grid Snapping) ---
 function snapToGrid() {
-    // Berechnet die aktuelle Fensterbreite und rundet auf das nächste glatte Vielfache von 20 auf
     const gridWidth = Math.ceil(window.innerWidth / gridSize) * gridSize;
 
-    // Greift sich alle Tiere, die von rechts ins Bild laufen
-    document.querySelectorAll('.cat, .pokeball, .triforce, .boba').forEach(el => {
-        // Das Triforce braucht etwas mehr Anlauf (260px), der Rest startet bei 200px
+    // Aktualisiert mit paw und gamepad
+    document.querySelectorAll('.cat, .pokeball, .triforce, .boba, .paw, .gamepad').forEach(el => {
         let offset = el.classList.contains('triforce') ? 260 : 200;
-
-        // Löst den krummen rechten CSS-Anker und setzt einen perfekten linken Anker
         el.style.right = 'auto';
         el.style.left = (gridWidth + offset) + 'px';
     });
 }
 
-// Führt das Snapping beim Neuladen und bei jeder Größenänderung des Fensters aus
 snapToGrid();
 window.addEventListener('resize', snapToGrid);
 
@@ -381,31 +348,30 @@ window.addEventListener('resize', snapToGrid);
 const newsFeed = document.getElementById('news-feed');
 
 if (newsFeed) {
-    fetch('news.json')
+    fetch(document.documentElement.lang === 'de' ? 'news_de.json' : 'news.json')
         .then(response => {
             if (!response.ok) throw new Error("JSON nicht gefunden");
             return response.json();
         })
         .then(data => {
-            newsFeed.innerHTML = ''; // Lade-Text entfernen
+            newsFeed.innerHTML = ''; 
 
             data.forEach(news => {
                 const article = document.createElement('div');
                 article.className = 'news-item';
 
-                // Setzt die Hauptfarbe für den ganzen Eintrag (Border & Links)
                 const mainColor = news.color || 'var(--accent-cyan)';
                 article.style.setProperty('--item-color', mainColor);
 
-                // 1. Tags zusammenbauen (unterstützt jetzt ein Array von Tags)
                 let tagsHTML = '';
                 if (Array.isArray(news.tags)) {
                     news.tags.forEach(tag => {
                         tagsHTML += `<span class="news-tag" style="color: ${mainColor}; border: 1px solid ${mainColor}40;">${tag}</span>`;
                     });
+                } else if (news.tag) {
+                     tagsHTML += `<span class="news-tag" style="color: ${mainColor}; border: 1px solid ${mainColor}40;">${news.tag}</span>`;
                 }
 
-                // 2. Bild & Untertitel zusammenbauen (nur wenn ein Bild angegeben ist)
                 let mediaHTML = '';
                 if (news.image) {
                     let captionHTML = news.caption ? `<figcaption class="news-caption">${news.caption}</figcaption>` : '';
@@ -417,7 +383,6 @@ if (newsFeed) {
                     `;
                 }
 
-                // 3. Alles in das HTML-Gerüst gießen
                 article.innerHTML = `
                     <div class="news-meta">
                         <span class="news-date">${news.date}</span>

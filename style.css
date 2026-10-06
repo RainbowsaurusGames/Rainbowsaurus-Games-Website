@@ -115,6 +115,23 @@ body {
             text-shadow: 0 0 15px rgba(0, 230, 118, 0.6);
         }
 
+/* ANIMIERTER MAIL BUTTON */
+@keyframes cycleNavColors {
+    0% { color: var(--accent-cyan); text-shadow: 0 0 15px rgba(0, 240, 255, 0.6); }
+    25% { color: var(--accent-pink); text-shadow: 0 0 15px rgba(255, 71, 126, 0.6); }
+    50% { color: var(--accent-yellow); text-shadow: 0 0 15px rgba(255, 204, 0, 0.6); }
+    75% { color: var(--accent-green); text-shadow: 0 0 15px rgba(0, 230, 118, 0.6); }
+    100% { color: var(--accent-cyan); text-shadow: 0 0 15px rgba(0, 240, 255, 0.6); }
+}
+
+.top-nav a.nav-animated, .top-nav-about a.nav-animated {
+    animation: cycleNavColors 8s linear infinite;
+}
+
+.top-nav a.nav-animated:hover, .top-nav-about a.nav-animated:hover {
+    transform: scale(1.1);
+}
+
 /* --- FLAGGEN BUTTONS --- */
 .nav-lang {
     display: inline-flex !important;
@@ -127,7 +144,7 @@ body {
     font-weight: bold;
     text-shadow: 1px 1px 2px rgba(0,0,0,0.9) !important;
     letter-spacing: 2px !important;
-    border: none !important; /* Entfernt den störenden Rand komplett */
+    border: none !important;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
 }
@@ -139,7 +156,7 @@ body {
 
 .flag-de {
     background: linear-gradient(to bottom, #000000 0%, #000000 33.3%, #FF0000 33.3%, #FF0000 66.6%, #FFCC00 66.6%, #FFCC00 100%) !important;
-    background-repeat: no-repeat !important; /* Verhindert das gelbe Durchbluten oben */
+    background-repeat: no-repeat !important;
     background-size: 100% 100% !important;
 }
 
@@ -161,7 +178,6 @@ body {
     background-color: transparent;
     z-index: 5;
     
-    /* Welle als Schnittmaske */
     -webkit-mask-image: linear-gradient(black, black), url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 120' preserveAspectRatio='none'%3E%3Cpath d='M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V95.8C59.71,118.08,130.83,120.34,201.39,112.59Z'/%3E%3C/svg%3E");
     -webkit-mask-size: 100% calc(100% - 99px), 100% 100px;
     -webkit-mask-position: top, bottom;
@@ -231,8 +247,8 @@ body {
 /* SPRECHBLASE */
 .pixel-speech-bubble {
     position: absolute;
-    bottom: 70%; /* Vorher 55% – schiebt die Blase deutlich weiter nach oben */
-    left: 86%; /* Vorher 70% – zieht die Blase weiter nach rechts */
+    bottom: 70%;
+    left: 86%;
     background-color: var(--text-main);
     color: var(--bg-main);
     font-family: 'Courier New', Courier, monospace;
@@ -825,6 +841,44 @@ body {
         transform: translateY(-2px);
     }
 
+/* --- ANIMIERTER KONTAKT BUTTON UNTEN --- */
+@keyframes cycleBgColors {
+    0% {
+        background-color: var(--accent-cyan);
+        box-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+    }
+
+    25% {
+        background-color: var(--accent-pink);
+        box-shadow: 0 0 15px rgba(255, 71, 126, 0.6);
+    }
+
+    50% {
+        background-color: var(--accent-yellow);
+        box-shadow: 0 0 15px rgba(255, 204, 0, 0.6);
+    }
+
+    75% {
+        background-color: var(--accent-green);
+        box-shadow: 0 0 15px rgba(0, 230, 118, 0.6);
+    }
+
+    100% {
+        background-color: var(--accent-cyan);
+        box-shadow: 0 0 15px rgba(0, 240, 255, 0.6);
+    }
+}
+
+.contact-button.animated-bg {
+    animation: cycleBgColors 8s linear infinite;
+    color: var(--bg-main);
+    border: none;
+}
+
+    .contact-button.animated-bg:hover {
+        transform: translateY(-2px) scale(1.05);
+    }
+
 .footer-nav {
     display: flex;
     justify-content: center;
@@ -853,6 +907,7 @@ body {
 .tab-cyan:hover, .tab-cyan.active { background-color: var(--accent-cyan); border-color: var(--accent-cyan); color: var(--bg-main); box-shadow: 0 0 15px rgba(0, 240, 255, 0.4); }
 .tab-pink:hover, .tab-pink.active { background-color: var(--accent-pink); border-color: var(--accent-pink); color: var(--text-main); box-shadow: 0 0 15px rgba(255, 71, 126, 0.4); }
 .tab-yellow:hover, .tab-yellow.active { background-color: var(--accent-yellow); border-color: var(--accent-yellow); color: var(--bg-main); box-shadow: 0 0 15px rgba(255, 204, 0, 0.4); }
+.tab-green:hover, .tab-green.active { background-color: var(--accent-green); border-color: var(--accent-green); color: var(--bg-main); box-shadow: 0 0 15px rgba(0, 230, 118, 0.4); }
 
 /* --- 13. SCROLL ANIMATIONEN --- */
 .slide-hidden {
@@ -965,6 +1020,30 @@ body {
     animation: stepLeft 110s steps(150) infinite 40s;
     right: -200px;
     box-shadow: 60px 0 0 var(--accent-pink), 80px 0 0 var(--accent-pink), 60px 20px 0 var(--accent-pink), 80px 20px 0 var(--accent-pink), 60px 40px 0 var(--accent-pink), 80px 40px 0 var(--accent-pink), 20px 60px 0 var(--accent-cyan), 40px 60px 0 var(--accent-cyan), 60px 60px 0 var(--accent-cyan), 80px 60px 0 var(--accent-cyan), 100px 60px 0 var(--accent-cyan), 120px 60px 0 var(--accent-cyan), 20px 80px 0 var(--accent-cyan), 40px 80px 0 var(--accent-cyan), 60px 80px 0 var(--accent-cyan), 80px 80px 0 var(--accent-cyan), 100px 80px 0 var(--accent-cyan), 120px 80px 0 var(--accent-cyan), 20px 100px 0 var(--text-main), 120px 100px 0 var(--text-main), 20px 120px 0 var(--text-main), 120px 120px 0 var(--text-main), 20px 140px 0 var(--text-main), 120px 140px 0 var(--text-main), 40px 160px 0 var(--text-main), 100px 160px 0 var(--text-main), 40px 180px 0 var(--text-main), 60px 180px 0 var(--text-main), 80px 180px 0 var(--text-main), 100px 180px 0 var(--text-main), 40px 120px 0 var(--accent-yellow), 80px 120px 0 var(--accent-yellow), 60px 140px 0 var(--accent-pink), 100px 140px 0 var(--accent-yellow), 60px 160px 0 var(--accent-yellow), 80px 160px 0 var(--accent-pink);
+}
+
+.smiley {
+    animation: stepRight 85s steps(150) infinite 12s;
+    left: -200px;
+    box-shadow: 40px 0 0 var(--accent-yellow), 60px 0 0 var(--accent-yellow), 80px 0 0 var(--accent-yellow), 20px 20px 0 var(--accent-yellow), 40px 20px 0 var(--accent-yellow), 60px 20px 0 var(--accent-yellow), 80px 20px 0 var(--accent-yellow), 100px 20px 0 var(--accent-yellow), 0 40px 0 var(--accent-yellow), 20px 40px 0 var(--accent-yellow), 60px 40px 0 var(--accent-yellow), 100px 40px 0 var(--accent-yellow), 120px 40px 0 var(--accent-yellow), 0 60px 0 var(--accent-yellow), 20px 60px 0 var(--accent-yellow), 40px 60px 0 var(--accent-yellow), 60px 60px 0 var(--accent-yellow), 80px 60px 0 var(--accent-yellow), 100px 60px 0 var(--accent-yellow), 120px 60px 0 var(--accent-yellow), 0 80px 0 var(--accent-yellow), 40px 80px 0 var(--accent-yellow), 60px 80px 0 var(--accent-yellow), 80px 80px 0 var(--accent-yellow), 120px 80px 0 var(--accent-yellow), 20px 100px 0 var(--accent-yellow), 100px 100px 0 var(--accent-yellow), 40px 120px 0 var(--accent-yellow), 60px 120px 0 var(--accent-yellow), 80px 120px 0 var(--accent-yellow);
+}
+
+.paw {
+    animation: stepLeft 70s steps(150) infinite 18s;
+    right: -200px;
+    box-shadow: 40px 0 0 var(--accent-pink), 60px 0 0 var(--accent-pink), 0 20px 0 var(--accent-pink), 20px 20px 0 var(--accent-pink), 80px 20px 0 var(--accent-pink), 100px 20px 0 var(--accent-pink), 40px 60px 0 var(--accent-pink), 60px 60px 0 var(--accent-pink), 20px 80px 0 var(--accent-pink), 40px 80px 0 var(--accent-pink), 60px 80px 0 var(--accent-pink), 80px 80px 0 var(--accent-pink), 0 100px 0 var(--accent-pink), 20px 100px 0 var(--accent-pink), 40px 100px 0 var(--accent-pink), 60px 100px 0 var(--accent-pink), 80px 100px 0 var(--accent-pink), 100px 100px 0 var(--accent-pink), 20px 120px 0 var(--accent-pink), 40px 120px 0 var(--accent-pink), 60px 120px 0 var(--accent-pink), 80px 120px 0 var(--accent-pink), 40px 140px 0 var(--accent-pink), 60px 140px 0 var(--accent-pink);
+}
+
+.skull {
+    animation: stepRight 95s steps(150) infinite 45s;
+    left: -200px;
+    box-shadow: 40px 0 0 #FFFFFF, 60px 0 0 #FFFFFF, 80px 0 0 #FFFFFF, 20px 20px 0 #FFFFFF, 40px 20px 0 #FFFFFF, 60px 20px 0 #FFFFFF, 80px 20px 0 #FFFFFF, 100px 20px 0 #FFFFFF, 0 40px 0 #FFFFFF, 20px 40px 0 #FFFFFF, 40px 40px 0 #FFFFFF, 60px 40px 0 #FFFFFF, 80px 40px 0 #FFFFFF, 100px 40px 0 #FFFFFF, 120px 40px 0 #FFFFFF, 0 60px 0 #FFFFFF, 40px 60px 0 #FFFFFF, 60px 60px 0 #FFFFFF, 80px 60px 0 #FFFFFF, 120px 60px 0 #FFFFFF, 0 80px 0 #FFFFFF, 20px 80px 0 #FFFFFF, 40px 80px 0 #FFFFFF, 60px 80px 0 #FFFFFF, 80px 80px 0 #FFFFFF, 100px 80px 0 #FFFFFF, 120px 80px 0 #FFFFFF, 20px 100px 0 #FFFFFF, 40px 100px 0 #FFFFFF, 60px 100px 0 #FFFFFF, 80px 100px 0 #FFFFFF, 100px 100px 0 #FFFFFF, 40px 120px 0 #FFFFFF, 60px 120px 0 #FFFFFF, 80px 120px 0 #FFFFFF, 40px 140px 0 #FFFFFF, 80px 140px 0 #FFFFFF;
+}
+
+.gamepad {
+    animation: stepLeft 65s steps(150) infinite 30s;
+    right: -200px;
+    box-shadow: 20px 0 0 var(--accent-cyan), 40px 0 0 var(--accent-cyan), 80px 0 0 var(--accent-cyan), 100px 0 0 var(--accent-cyan), 0 20px 0 var(--accent-cyan), 20px 20px 0 var(--accent-cyan), 40px 20px 0 var(--accent-cyan), 60px 20px 0 var(--accent-cyan), 80px 20px 0 var(--accent-cyan), 100px 20px 0 var(--accent-cyan), 120px 20px 0 var(--accent-cyan), 0 40px 0 var(--accent-cyan), 60px 40px 0 var(--accent-cyan), 120px 40px 0 var(--accent-cyan), 0 60px 0 var(--accent-cyan), 20px 60px 0 var(--accent-cyan), 40px 60px 0 var(--accent-cyan), 60px 60px 0 var(--accent-cyan), 80px 60px 0 var(--accent-cyan), 100px 60px 0 var(--accent-cyan), 120px 60px 0 var(--accent-cyan), 20px 80px 0 var(--accent-cyan), 100px 80px 0 var(--accent-cyan);
 }
 
 @keyframes stepRight {
@@ -1278,6 +1357,7 @@ body, a, button, label {
     .hero-section {
         flex-direction: column-reverse;
         text-align: center;
+        margin-top: 90px;
     }
 
     .bento-grid {
