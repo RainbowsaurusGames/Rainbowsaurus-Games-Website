@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Yu Abendroth | Game Developer & UI/UX Designer Portfolio</title>
-    <meta name="description" content="Persönliches Portfolio von Yu Abendroth – Fachkraft für Anwendungsentwicklung, Code-Architektur in C# & Python, UI/UX-Design und digitale Illustrationen.">
+    <link rel="icon" type="image/svg+xml" href="graphics/favicon.svg">
+    <meta name="description" content="Persönliches Portfolio von Yu Abendroth – Anwendungsentwicklung, Code-Architektur in C# & Python, UI/UX Design und digitale Illustrationen.">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -15,17 +16,18 @@
     <div class="portfolio-container">
 
         <nav class="top-nav-about">
-            <a href="index.html" class="nav-cyan">HOME</a>
-            <a href="about.html" class="nav-pink active">PROFIL</a>
+            <a href="index_de.html" class="nav-cyan">HOME</a>
+            <a href="about_de.html" class="nav-pink active">PROFIL</a>
             <a href="https://itch.io" target="_blank" class="nav-yellow">GAMES</a>
-            <a href="mailto:yuabendroth@gmail.com" class="nav-green">MAIL YU</a>
+            <a href="mailto:yuabendroth@gmail.com" class="nav-green">MAIL</a>
+            <a href="about.html" class="nav-lang flag-en" onclick="localStorage.setItem('langPref', 'en')">EN</a>
         </nav>
 
         <header class="hero-section">
             <div class="hero-text">
                 <span class="accent-tag">Hallo, ich bin Yu</span>
                 <h1>Game Developer & <br>UI/UX Designer.</h1>
-                <p>Code-Architektur in C# & Python trifft auf gestaltungstechnische Expertise.</p>
+                <p>Code-Architektur in C# & Python trifft auf Design-Expertise.</p>
             </div>
 
             <div class="profile-container">
@@ -58,13 +60,14 @@
                     <img src="graphics/ArcadePicture.jpg" alt="Yu Abendroth" class="profile-img img-default">
                     <img src="graphics/GreifautomatYu.jpg" alt="Yu Abendroth" class="profile-img img-hover">
                 </div>
+                <div class="pixel-speech-bubble profile-bubble">Die Kralle bestimmt, wer geht und<br>wer bleibt!</div>
             </div>
         </header>
 
         <main class="bento-grid">
             <section class="card wide-card about-card slide-hidden">
-                <h2>Werdegang & Fokus</h2>
-                <p>Angehende Fachkraft für Anwendungsentwicklung. Mein Fokus liegt auf der Entwicklung interaktiver Anwendungen, sauberen Datenbank-Strukturen und ansprechendem Frontend-Design.</p>
+                <h2>Hintergrund & Fokus</h2>
+                <p>Anstrebender Fachinformatiker für Anwendungsentwicklung. Mein Fokus liegt auf der Entwicklung interaktiver Anwendungen, sauberen Datenbankstrukturen und ansprechendem Frontend-Design.</p>
             </section>
             <section class="card square-card tech-card slide-hidden-right">
                 <h2>Tech Stack</h2>
@@ -80,7 +83,7 @@
                 <div class="slideshow-container" id="art-slideshow"></div>
                 <div class="project-info">
                     <h2>Digitale Illustration & Design</h2>
-                    <p>Konzeption und Umsetzung von detaillierten Character-Sheets, UI-Elementen und animierten Sprite-Sets. Mein Workflow kombiniert fundiertes Gestaltungs-Wissen mit digitalen Werkzeugen.</p>
+                    <p>Konzept und Erstellung von detaillierten Character-Sheets, UI-Elementen und animierten Sprite-Sets. Mein Workflow kombiniert fundiertes Designwissen mit digitalen Werkzeugen.</p>
                     <div class="badge-container" style="margin-top: 15px;">
                         <span class="badge" style="color: var(--accent-yellow); border-color: var(--accent-yellow); background-color: rgba(255, 204, 0, 0.1);">Procreate</span>
                         <span class="badge" style="color: var(--accent-pink); border-color: var(--accent-pink); background-color: rgba(255, 71, 126, 0.1);">Aseprite</span>
@@ -95,10 +98,10 @@
                 <span class="stat-number">3+</span><span class="stat-label">Aktive Indie-Projekte</span>
             </div>
             <div class="stat-item slide-hidden">
-                <span class="stat-number">10k+</span><span class="stat-label">Zeilen C# Code</span>
+                <span class="stat-number">10k+</span><span class="stat-label">Zeilen C#-Code</span>
             </div>
             <div class="stat-item slide-hidden-right">
-                <span class="stat-number">100%</span><span class="stat-label">Pixel Art Leidenschaft</span>
+                <span class="stat-number">100%</span><span class="stat-label">Pixel-Art-Leidenschaft</span>
             </div>
         </section>
 
@@ -108,72 +111,180 @@
                 <div class="journey-line-bg"></div>
                 <div class="journey-line-progress" id="journey-progress"></div>
 
+                <!-- Okt 2025 - Jan 2028 -->
                 <div class="journey-item">
                     <div class="journey-year-container">
-                        <div class="journey-year">2025 - heute</div>
+                        <div class="journey-year" style="font-size: 1.2rem; line-height: 1.3;">
+                            Okt 2025<br>
+                            <span style="font-size: 0.9rem; opacity: 0.5;">bis</span><br>
+                            Jan 2028
+                        </div>
                     </div>
                     <div class="journey-content-wrapper">
                         <div class="journey-image collage-header">
                             <div class="collage-item portrait"><img src="graphics/UschiUnkrautProjekt.jpg" alt="Uschi Unkraut"></div>
                             <div class="collage-item landscape-top"><img src="graphics/Uschigruppe.jpg" alt="Uschi Gruppe"></div>
-                            <div class="collage-item landscape-bottom"><img src="https://placehold.co/400x200/2A2E37/00E676?text=Querformat+2" alt="Platzhalter"></div>
+                            <div class="collage-item landscape-bottom"><img src="graphics/Grünhilde.jpg" alt="Placeholder"></div>
                         </div>
                         <div class="journey-text">
-                            <h3>Fachinformatik für Anwendungsentwicklung</h3>
-                            <p>Umschulung am BFW Köln. Fokus auf komplexe Logikstrukturen in C# und Python.</p>
+                            <h3>Umschulung Fachinformatik</h3>
+                            <p>Diakonie Michaelshoven, Berufsförderungswerk Köln gGmbH. Abschluss als Fachinformatiker für Anwendungsentwicklung.</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Apr 2021 - Okt 2023 -->
                 <div class="journey-item">
                     <div class="journey-year-container">
-                        <div class="journey-year">2016 - 2023</div>
+                        <div class="journey-year" style="font-size: 1.2rem; line-height: 1.3;">
+                            Apr 2021<br>
+                            <span style="font-size: 0.9rem; opacity: 0.5;">bis</span><br>
+                            Okt 2023
+                        </div>
+                    </div>
+                    <div class="journey-content-wrapper">
+                        <div class="journey-text">
+                            <h3>Intensivpflegefachkraft</h3>
+                            <p>Anstellung bei ME Intensivpflege Baesweiler.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nov 2019 - Feb 2021 -->
+                <div class="journey-item">
+                    <div class="journey-year-container">
+                        <div class="journey-year" style="font-size: 1.2rem; line-height: 1.3;">
+                            Nov 2019<br>
+                            <span style="font-size: 0.9rem; opacity: 0.5;">bis</span><br>
+                            Feb 2021
+                        </div>
                     </div>
                     <div class="journey-content-wrapper">
                         <div class="journey-image" style="position: relative; height: auto;">
-                            <img src="graphics/SchlossTripsInnereVorburgTordurchfahrt.jpg" alt="Altenheim Burg" style="width: 100%; height: 100%; object-fit: cover;">
+                            <img src="graphics\Halloween2020.jpg" alt="Yu and patient in costume" style="width: 100%; height: 100%; object-fit: cover;">
                             <div class="license-overlay">
-                                Foto: Christopher Friese / CC BY-SA 4.0 / Wikimedia Commons
+                                Halloween © 2020 Yu Abendroth
                             </div>
                         </div>
                         <div class="journey-text">
-                            <h3>Pflegefachkraft & Intensivpflege</h3>
-                            <p>Mehrjährige Berufserfahrung als examinierte Pflegefachkraft. Hohe Stressresistenz und Teamfähigkeit in herausfordernden Situationen.</p>
+                            <h3>Altenpflegefachkraft</h3>
+                            <p>Anstellung bei JC Goskowitz GmbH, Haus Maria Eschweiler.</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Okt 2016 - Okt 2019 -->
                 <div class="journey-item">
                     <div class="journey-year-container">
-                        <div class="journey-year">2012 - 2015</div>
+                        <div class="journey-year" style="font-size: 1.2rem; line-height: 1.3;">
+                            Okt 2016<br>
+                            <span style="font-size: 0.9rem; opacity: 0.5;">bis</span><br>
+                            Okt 2019
+                        </div>
                     </div>
                     <div class="journey-content-wrapper">
-                        <div class="journey-image collage-header collage-reversed">
-                            <div class="collage-item portrait"><img src="https://placehold.co/300x400/2A2E37/00F0FF?text=Hochformat" alt="Platzhalter"></div>
-                            <div class="collage-item landscape-top"><img src="https://placehold.co/400x200/2A2E37/FF477E?text=Querformat+1" alt="Platzhalter"></div>
-                            <div class="collage-item landscape-bottom"><img src="https://placehold.co/400x200/2A2E37/00E676?text=Querformat+2" alt="Platzhalter"></div>
+                        <div class="journey-image" style="position: relative; height: auto;">
+                            <img src="graphics\A41ExamenskursOkt2019.jpg" alt="Nursing Home Castle" style="width: 100%; height: 100%; object-fit: cover;">
+                            <div class="license-overlay">
+                                Abschlusswand im Kursraum (selbstgestaltet) © 2019 Yu Abendroth
+                            </div>
                         </div>
                         <div class="journey-text">
-                            <h3>Gestaltungstechnische Assistenz</h3>
-                            <p>Berufskolleg Aachen. Fundierte Ausbildung in UI/UX, Layout und visueller Gestaltung.</p>
+                            <h3>Ausbildung zur Pflegefachkraft</h3>
+                            <p>Pflegeheim Burg Trips Geilenkirchen gGmbH. Abschluss als Examinierte Pflegefachkraft.</p>
                         </div>
                     </div>
                 </div>
+
+                <!-- Sep 2015 - Jan 2016 -->
+                <div class="journey-item">
+                    <div class="journey-year-container">
+                        <div class="journey-year" style="font-size: 1.2rem; line-height: 1.3;">
+                            Sep 2015<br>
+                            <span style="font-size: 0.9rem; opacity: 0.5;">bis</span><br>
+                            Jan 2016
+                        </div>
+                    </div>
+                    <div class="journey-content-wrapper">
+                        <div class="journey-text">
+                            <h3>Gesundheitliche Rehabilitation</h3>
+                            <p>Zeit der medizinischen Rehabilitation und Genesung.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sep 2014 - Aug 2015 -->
+                <div class="journey-item">
+                    <div class="journey-year-container">
+                        <div class="journey-year" style="font-size: 1.2rem; line-height: 1.3;">
+                            Sep 2014<br>
+                            <span style="font-size: 0.9rem; opacity: 0.5;">bis</span><br>
+                            Aug 2015
+                        </div>
+                    </div>
+                    <div class="journey-content-wrapper">
+                        <div class="journey-text">
+                            <h3>Anstellung</h3>
+                            <p>Hertel NRW GmbH.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sep 2011 - Jul 2014 -->
+                <div class="journey-item">
+                    <div class="journey-year-container">
+                        <div class="journey-year" style="font-size: 1.2rem; line-height: 1.3;">
+                            Sep 2011<br>
+                            <span style="font-size: 0.9rem; opacity: 0.5;">bis</span><br>
+                            Jul 2014
+                        </div>
+                    </div>
+                    <div class="journey-content-wrapper">
+                        <div class="journey-image collage-header collage-reversed">
+                            <div class="collage-item portrait"><img src="https://placehold.co/300x400/2A2E37/00F0FF?text=Portrait" alt="Placeholder"></div>
+                            <div class="collage-item landscape-top"><img src="https://placehold.co/400x200/2A2E37/FF477E?text=Landscape+1" alt="Placeholder"></div>
+                            <div class="collage-item landscape-bottom"><img src="https://placehold.co/400x200/2A2E37/00E676?text=Landscape+2" alt="Placeholder"></div>
+                        </div>
+                        <div class="journey-text">
+                            <h3>Ausbildung zur gestaltungstechnischen Assistenz</h3>
+                            <p>Berufskolleg für Gestaltung und Technik Aachen. Abschluss als gestaltungstechnische Assistenz, inklusive Fachhochschulreife.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sep 2005 - Sep 2011 -->
+                <div class="journey-item">
+                    <div class="journey-year-container">
+                        <div class="journey-year" style="font-size: 1.2rem; line-height: 1.3;">
+                            Sep 2005<br>
+                            <span style="font-size: 0.9rem; opacity: 0.5;">bis</span><br>
+                            Sep 2011
+                        </div>
+                    </div>
+                    <div class="journey-content-wrapper">
+                        <div class="journey-text">
+                            <h3>Realschule</h3>
+                            <p>Realschule Baesweiler. Abschluss mit Fachoberschulreife.</p>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </section>
 
         <footer class="minimal-footer">
             <p>Bereit für spannende Code-Architektur?</p>
-            <a href="mailto:yuabendroth@gmail.com" class="contact-button">Lass uns zusammenarbeiten!</a>
+            <a href="mailto:yuabendroth@gmail.com" class="contact-button animated-bg">Lass uns zusammenarbeiten!</a>
             <nav class="footer-nav slide-hidden">
-                <a href="index.html" class="nav-tab tab-cyan">Studio & Games</a>
-                <a href="about.html" class="nav-tab tab-pink active">Entwickler Profil</a>
-                <a href="impressum.html" class="nav-tab tab-yellow">Impressum</a>
+                <a href="index_de.html" class="nav-tab tab-cyan">Studio & Games</a>
+                <a href="about_de.html" class="nav-tab tab-pink active">Entwickler Profil</a>
+                <a href="impressum_de.html" class="nav-tab tab-yellow">Impressum</a>
+                <a href="datenschutz_de.html" class="nav-tab tab-green">Datenschutz</a>
             </nav>
         </footer>
     </div>
 
-    <!-- Schwebende Pixel-Tiere -->
+    <!-- Floating Pixel Icons -->
     <div class="floating-pixel-container">
         <div class="pixel-shape bug"></div>
         <div class="pixel-shape cat"></div>
@@ -183,9 +294,13 @@
         <div class="pixel-shape triforce"></div>
         <div class="pixel-shape strawberry"></div>
         <div class="pixel-shape boba"></div>
+        <div class="pixel-shape smiley"></div>
+        <div class="pixel-shape paw"></div>
+        <div class="pixel-shape skull"></div>
+        <div class="pixel-shape gamepad"></div>
     </div>
 
-    <!-- Interaktiver Glas-Button für Canvas-Tools -->
+    <!-- Interactive Glass Button -->
     <div class="canvas-glass-container">
         <input type="checkbox" id="toggle-hint" class="hint-checkbox">
         <div class="glass-panel">

@@ -1,0 +1,39 @@
+[
+  {
+    "date": "2026-10-12",
+    "tags": [ "DEVLOG", "WANDERSOUL", "PIXEL ART" ],
+    "title": "Erste Kampfsystem-Tests & Neue Sprites",
+    "content": "Die Grundarchitektur für das Kampfsystem in C# steht! Ich habe heute die ersten Testläufe gemacht. [Mehr Details und Gameplay-GIFs gibt es bald in einem Devlog auf <a href='https://itch.io' target='_blank' class='news-link'>itch.io</a>.]",
+    "color": "var(--accent-purple)",
+    "image": "graphics/WSLOGO.png",
+    "caption": "Wandersoul: Erstes UI-Konzept für das Logo"
+  },
+  {
+    "date": "2026-09-29",
+    "tags": [ "STUDIO", "BEHIND THE SCENES" ],
+    "title": "Produktivität leicht gemacht",
+    "content": "Das Code-Refactoring läuft heute besonders gut. Mochi hat die Qualitätskontrolle auf dem Schreibtisch übernommen.",
+    "color": "var(--accent-yellow)"
+  },
+  {
+    "date": "2026-09-20",
+    "tag": "UPDATE",
+    "title": "Website-Launch & Sprachauswahl",
+    "content": "Die neue Rainbowsaurus Games Website ist offiziell live! Komplett mit Mobile-Optimierung, versteckter Zeichenleinwand und automatischer Sprachumschaltung.",
+    "color": "var(--accent-cyan)"
+  },
+  {
+    "date": "2026-08-30",
+    "tag": "EVENT",
+    "title": "Gamescom 2026 Rückblick",
+    "content": "Wow, was für eine Woche in Köln! Es war großartig, sich mit anderen Indie-Entwicklern zu vernetzen und viel frische Motivation für die weitere Entwicklung von Wandersoul zu sammeln. Die vielen Leute machten das Navigieren durch die Massen allerdings schwieriger und die Getränke waren teurer als Erdöl, heh! Ich habe gesehen, wie ein Luigi sich selbst in Apfelschorle ertränkt hat, als er die Flasche zu schnell mit einem 'MAMMA MIA!' geöffnet hat XD",
+    "color": "var(--accent-pink)"
+  },
+  {
+    "date": "2026-07-15",
+    "tag": "GAME JAM",
+    "title": "Startschuss für Buggy Juice",
+    "content": "Der Startschuss für den 'One last night' Game Jam ist gefallen! Wir experimentieren mit Custom-Shadern und super süßen Animationen für unser kleines Arcade-Projekt.",
+    "color": "var(--accent-yellow)"
+  }
+]
