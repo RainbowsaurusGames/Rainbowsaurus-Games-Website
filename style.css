@@ -280,6 +280,21 @@ body {
         animation: bubblePop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, floatBubble 3s ease-in-out infinite 0.4s;
     }
 
+/* EASTER EGG SPRECHBLASE (Profilbild) */
+.profile-bubble {
+    bottom: 80%;
+    left: 65%;
+    width: max-content;
+    max-width: 250px;
+    pointer-events: none; /* Wichtig: Die Blase darf den Hover-Effekt nicht stören! */
+    z-index: 20;
+}
+
+/* Der Auslöser: Hover auf den Container startet die Pop-Animation */
+.profile-container:hover .profile-bubble {
+    animation: bubblePop 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards, floatBubble 3s ease-in-out infinite 0.4s;
+}
+
 @keyframes bubblePop {
     0% { transform: scale(0); opacity: 0; }
     100% { transform: scale(1); opacity: 1; }
@@ -1346,6 +1361,19 @@ body, a, button, label {
             border-right: 8px solid transparent;
             border-top: 10px solid var(--text-main);
             border-bottom: none;
+        }
+
+    /* Easter Egg Handy-Fix */
+    .profile-bubble {
+        position: absolute !important;
+        bottom: 95% !important;
+        left: 50% !important;
+        margin-left: -125px !important; /* Zentriert die 250px breite Blase */
+        width: 250px !important;
+    }
+
+        .profile-bubble::after {
+            left: 50% !important;
         }
 
     .studio-tagline {
