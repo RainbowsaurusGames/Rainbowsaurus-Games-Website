@@ -192,7 +192,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Fix für den Regenbogenkreis */
     z-index: 0;
     opacity: 0.3;
 }
@@ -203,8 +203,10 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(22, 24, 29, 0.3);
-    box-shadow: inset 0 0 150px rgba(0,0,0, 1);
+    /* Erzeugt einen weichen Verlauf von transparent in der Mitte zur Hintergrundfarbe am Rand */
+    background: radial-gradient(circle, transparent 35%, var(--bg-main) 75%);
+    /* Ein zusätzlicher, sehr dicker innerer Schatten verwischt die äußersten Kanten komplett */
+    box-shadow: inset 0 0 200px 100px var(--bg-main);
     pointer-events: none;
     z-index: 1;
 }
@@ -1596,7 +1598,7 @@ body, a, button, label {
     border-radius: 6px;
     border: 1px solid rgba(255, 255, 255, 0.1);
     overflow: hidden;
-    background-color: #000;
+    background-color: transparent; /* Verhindert schwarze Boxen hinter PNGs */
 }
 
     .news-media img {
