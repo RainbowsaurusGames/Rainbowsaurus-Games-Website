@@ -1,21 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-        <loc>https://rainbowsaurusgames.github.io/Rainbowsaurus-Games-Website/index.html</loc>
-        <lastmod>2026-09-29</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
-    </url>
-    <url>
-        <loc>https://rainbowsaurusgames.github.io/Rainbowsaurus-Games-Website/about.html</loc>
-        <lastmod>2026-09-29</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.8</priority>
-    </url>
-    <url>
-        <loc>https://rainbowsaurusgames.github.io/Rainbowsaurus-Games-Website/impressum.html</loc>
-        <lastmod>2026-09-29</lastmod>
-        <changefreq>yearly</changefreq>
-        <priority>0.3</priority>
-    </url>
+
+  <!-- ENGLISCHE SEITEN -->
+  <url>
+    <loc>https://rainbowsaurusgames.github.io/Rainbowsaurus-Games-Website/index.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://rainbowsaurusgames.github.io/Rainbowsaurus-Games-Website/about.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rainbowsaurusgames.github.io/Rainbowsaurus-Games-Website/impressum.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://rainbowsaurusgames.github.io/Rainbowsaurus-Games-Website/datenschutz.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.50</priority>
+  </url>
+
+  <!-- DEUTSCHE SEITEN -->
+  <url>
+    <loc>https://rainbowsaurusgames.github.io/Rainbowsaurus-Games-Website/index_de.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://rainbowsaurusgames.github.io/Rainbowsaurus-Games-Website/about_de.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://rainbowsaurusgames.github.io/Rainbowsaurus-Games-Website/impressum_de.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.50</priority>
+  </url>
+  <url>
+    <loc>https://rainbowsaurusgames.github.io/Rainbowsaurus-Games-Website/datenschutz_de.html</loc>
+    <lastmod>2026-10-10</lastmod>
+    <priority>0.50</priority>
+  </url>
+
 </urlset>
